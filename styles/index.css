@@ -1,7 +1,8 @@
 :root {
-    --main-bgcolor: rgb(255, 255, 255);
+    --main-bgcolor: #f0f0f0;
     --font-color: rgb(0, 0, 0);
     --hover-color: rgb(158, 63, 0);
+    --header-bgimg: url("../img/header-footer-bg.png");
 }
 
 *, *::before, *::after {
@@ -9,90 +10,97 @@
 }
 
 body {
-    background-color: var(--main-bgcolor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media only screen and (min-width: 768px) {
-    .header-container {
-        background-image: url("../img/header-footer-bg.png");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: hard-light;
-        background-clip: border-box;
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-        flex-wrap: nowrap;
-        align-items: center;
-        height: 60px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-    }
-    .logo-container {
-        justify-content: center;
-        align-content: center;
-    }
-    .logo-container .logo {
-        height: 40px;
-        transition: transform .2s;
-    }
-    .logo-container .logo:hover {
-        transform: scale(1.1);
-    }
-    .navbar-container {
-        align-items: center;
-        justify-items: center;
-    }
-    .navbar-list {
-        list-style: none;
-        overflow: hidden;
-    }
-    .navbar-list-element {
-        display: inline-flex;
-        margin: 5px;
-    }
-    .navbar-element-link {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: var(--font-color);
-        font-weight: bold;
-        text-align: center;
-        transition: transform .2s;
-    }
-    .navbar-element-link:hover {
-        color: var(--hover-color);
-        transform: scale(1.1)
-    }
-    .navbar-element-link:focus {
-        color: rgb(255, 102, 0);
-    }
-    
-    .footer-container {
-        background-image: url("../img/header-footer-bg.png");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: hard-light;
-        background-clip: border-box;
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-        flex-wrap: nowrap;
-        align-items: center;
-        height: 60px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.75);
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 10;
-    }
+.header {
+    /* flexbox settings */
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 50%;
+    justify-content: space-between;
+    align-items: center;
+    /* end flexbox settings */
+    /* box general styling */
+    background-color: var(--main-bgcolor);
+    background-image: var(--header-bgimg);
+    background-blend-mode: lighten;
+    background-position: top;
+    background-size: cover;
+    width: 100vw;
+    height: 10vh;
+    padding: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.37);
+    /* end of box general styling */
+}
+
+.logo {
+    height: 7vh;
+    transition: transform .2s; /* Zoom transition */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom animation */
+}
+
+.navbar-list {
+    list-style-type: none; 
+}
+
+.navbar-list-element {
+    display: inline;
+    margin: 5px;
+}
+
+.navbar-element-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+.body-grid {
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: space-between;
+}
+
+.main {
+    padding: 20px;
+    flex-basis: 75vw;
+    order: 2;
+}
+
+.main section {
+    background-image: var(--header-bgimg);
+    background-color: var(--main-bgcolor);
+    background-blend-mode: luminosity;
+    background-attachment: fixed;
+    background-position: right;
+}
+
+.sidebar {
+    padding: 20px;
+    flex-basis: 25vw;
+    order: 1;
+}
+.footer {
+    /* flexbox settings */
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 50%;
+    justify-content: space-between;
+    align-items: center;
+    /* end flexbox settings */
+    /* box general styling */
+    background-color: var(--main-bgcolor);
+    background-image: var(--header-bgimg);
+    background-blend-mode: lighten;
+    background-position: bottom;
+    background-size: cover;
+    width: 100vw;
+    height: 10vh;
+    padding: 20px;
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.37);
+    /* end of box general styling */
 }
