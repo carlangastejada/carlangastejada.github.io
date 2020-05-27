@@ -15,7 +15,10 @@ body {
     align-items: center;
     background: rgb(18, 30, 49);
     height: 60px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75)
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo-container {
