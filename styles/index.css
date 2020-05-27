@@ -75,7 +75,7 @@ body {
     grid-template-areas: "sidebar main";
     gap: 0 50px;
     align-items: start;
-    margin: 30px;
+    margin: 90px 30px;
 }
 
 .main-content-container {
