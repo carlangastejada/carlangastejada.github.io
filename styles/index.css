@@ -25,6 +25,11 @@ body {
 
 .logo-container .logo {
     height: 40px;
+    transition: transform .2s;
+}
+
+.logo-container .logo:hover {
+    transform: scale(1.1);
 }
 
 .navbar-container {
@@ -49,10 +54,12 @@ body {
     color: white;
     font-weight: bold;
     text-align: center;
+    transition: transform .2s;
 }
 
 .navbar-element-link:hover {
-    color: yellow
+    color: yellow;
+    transform: scale(1.1)
 }
 
 .navbar-element-link:focus {
