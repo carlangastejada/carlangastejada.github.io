@@ -10,87 +10,108 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="shortcut icon" href="./img/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Carlos Reyes | Programador</title>
 </head>
 
 <body>
     <header class="header">
-        <a href="./index.html">
-            <img src="./img/logo.svg" alt="Carlos Reyes" class="logo">
-        </a>
         <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-list-element"><a href="./index.html" class="navbar-element-link">Inicio</a>
-                </li>
-                <li class="navbar-list-element"><a href="./quien-soy.html" class="navbar-element-link">¿Quién
-                        soy?</a></li>
-                <li class="navbar-list-element"><a href="#" class="navbar-element-link">Programas</a></li>
-                <li class="navbar-list-element"><a href="#" class="navbar-element-link">Sitios
-                        web</a></li>
-                <li class="navbar-list-element"><a href="#" class="navbar-element-link">Contacto</a></li>
+            <ul class="navbar-links-list">
+                <li class="navbar-elements"><a href="#whoiam" class="navbar-links">¿quién soy?</a></li>
+                <li class="navbar-elements"><a href="./index.html" class="navbar-links">
+                        <img src="./img/logo.svg" alt="Carlos Reyes" class="logo">
+                    </a></li>
+                <li class="navbar-elements"><a href="#contact" class="navbar-links">contacto</a></li>
             </ul>
         </nav>
-    </header>
-    <div class="body-grid">
-        <main class="main">
-            <section class="whoiam">
-                <article>
-                    <h1>¿QUIÉN SOY?</h1>
-                    <h2>Un programador venezolano</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vel reprehenderit! Id illum,
-                        minus
-                        rem porro voluptatem impedit hic perspiciatis quod necessitatibus quaerat asperiores quasi optio
-                        est
-                        unde. Cumque, molestiae?</p>
-                </article>
-            </section>
-            <section class="client-opinions">
-                <article>
-                    <h1>OPINIONES DE MIS CLIENTES: </h1>
-                    <h2>TAL</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto eligendi fugit odio. Nam,
-                        porro
-                        excepturi rem et natus in cum, eius obcaecati nisi maiores ut nulla quidem. Nulla, numquam!</p>
-                    <h2>OTRO TAL</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi quidem optio non itaque,
-                        fuga rem magni ipsa adipisci vel aliquam cumque, officia quia ipsum cum tempora eaque. Et,
-                        distinctio?</p>
-                    <h2>OOOTRO TAL</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis similique rerum, vero suscipit
-                        quae
-                        fugiat necessitatibus obcaecati aliquid voluptatum unde harum autem aspernatur corporis tempora
-                        eius
-                        facere architecto nostrum velit.</p>
-                </article>
-            </section>
-            <section class="ethical">
-                <article>
-                    <h1></h1>
-                    <h2></h2>
-                    <p></p>
-                </article>
-            </section>
-        </main>
-        <aside class="sidebar">
-            <section class="whoiam">
-                <article>
-                    <h1>¿QUIÉN SOY?</h1>
-                    <h2>Un programador venezolano</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vel reprehenderit! Id illum,
-                        minus
-                        rem porro voluptatem impedit hic perspiciatis quod necessitatibus quaerat asperiores quasi optio
-                        est
-                        unde. Cumque, molestiae?</p>
-                </article>
-            </section>
-        </aside>
-    </div>
-    <footer class="footer">
-        <p class="disclaimer">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus rem tempora fuga illum, dolores quo
-            optio, reiciendis sint veniam ea aspernatur iure exercitationem. Iusto alias ab placeat. Non, adipisci
-            nemo.
+        <p class="welcome-slogan">
+            Diseña tu presencia en la web
         </p>
+        <div class="scroll-downs">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="whoiam" id="whoiam">
+            <h1 class="whoiam-title">¿Quién soy?</h1>
+            <div class="whoiam-skills-container">
+                <p class="personal-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque aliquam illo minima recusandae
+                    nam
+                    tenetur assumenda eligendi pariatur inventore, a dolorem repellat repellendus nihil quidem officia
+                    odit
+                    iusto hic possimus.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur fuga exercitationem
+                    minima. Eaque, facilis et? Nulla deserunt, dolor corporis perferendis necessitatibus nostrum rerum?
+                    Ex, quam. Ab beatae incidunt earum.
+                </p>
+                <div class="skills">
+                    <div class="programming-language">
+                        <img src="#" alt="" class="programming-language-logo">
+                        <span>Python</span>
+                    </div>
+                    <div class="programming-language">
+                        <img src="#" alt="" class="programming-language-logo">
+                        <span>HTML</span>
+                    </div>
+                    <div class="programming-language">
+                        <img src="#" alt="" class="programming-language-logo">
+                        <span>css</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="webs-i-have-made" id="webs-i-have-made">
+            <h1 class="webs-i-have-made-title">TRABAJOS REALIZADOS</h1>
+            <img src="#" alt="" class="web-image-presentation">
+            <img src="#" alt="" class="web-image-presentation">
+            <img src="#" alt="" class="web-image-presentation">
+            <img src="#" alt="" class="web-image-presentation">
+        </section>
+        <section class="client-opinions" id="client-opinions">
+            <h1 class="client-opiniones-title">OPINIONES DE MIS CLIENTES</h1>
+            <div class="client-opinion-card">
+                <img src="#" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
+                <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio ipsam
+                    adipisci labore iure dolor error, aut quo nam!</p>
+            </div>
+            <div class="client-opinion-card">
+                <img src="#" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 2</h2>
+                <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio ipsam
+                    adipisci labore iure dolor error, aut quo nam!</p>
+            </div>
+            <div class="client-opinion-card">
+                <img src="#" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 3</h2>
+                <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio ipsam
+                    adipisci labore iure dolor error, aut quo nam!</p>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h1 class="contact-title">Contacto</h1>
+            <p class="contact-action-call">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam in recusandae
+                numquam explicabo, error vero, reiciendis, quos veritatis similique eaque quisquam magnam. Id veritatis
+                magnam quaerat error voluptas sapiente autem!</p>
+            <fieldset class="contact-form-container">
+                <form class="contact-form">
+                    <input type="text" class="name" placeholder="Nombres y apellidos" required>
+                    <input type="email" class="e-mail" placeholder="ejemplo@ejemplo.com" required>
+                    <textarea name="" id="" cols="30" rows="10" class="message" required></textarea>
+                    <input type="submit" class="submit-button">
+                </form>
+            </fieldset>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="copyright">Creado por Carlos Reyes. Derechos Reservados 2020.</p>
     </footer>
     <script src="./scripts/index.js"></script>
 </body>

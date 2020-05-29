@@ -1,8 +1,10 @@
 :root {
-    --main-bgcolor: #f0f0f0;
+    --main-bgcolor: #ffffff;
     --font-color: rgb(0, 0, 0);
     --hover-color: rgb(158, 63, 0);
-    --header-bgimg: url("../img/header-footer-bg.png");
+    --header-bgimg: url(../img/header-background.jpeg);
+    --titles-font: 'Nunito', monospace;
+    --paragraphs-font: "Nunito", monospace;
 }
 
 *, *::before, *::after {
@@ -10,97 +12,145 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--paragraphs-font);
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-family: var(--titles-font);
 }
 
 .header {
-    /* flexbox settings */
+    background-image: var(--header-bgimg);
+    background-color: rgba(0, 0, 0, 0.616);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 0 0 20% 20%;
+    height: 100vh;
+}
+
+.navbar-links-list {
     display: flex;
     flex-flow: row nowrap;
-    flex: 50%;
-    justify-content: space-between;
     align-items: center;
-    /* end flexbox settings */
-    /* box general styling */
-    background-color: var(--main-bgcolor);
-    background-image: var(--header-bgimg);
-    background-blend-mode: lighten;
-    background-position: top;
-    background-size: cover;
-    width: 100vw;
-    height: 10vh;
-    padding: 20px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.37);
-    /* end of box general styling */
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.navbar-links {
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--titles-font);
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .logo {
-    height: 7vh;
-    transition: transform .2s; /* Zoom transition */
+    height: 40px;
 }
 
-.logo:hover {
-    transform: scale(1.1); /* Zoom animation */
+.welcome-slogan {
+    font-size: 4.5em;
+    width: 500px;
+    font-family: var(--paragraphs-font);
+    margin-left: 100px;
+    color: white;
+    font-weight: 400;
+    text-align: right;
 }
 
-.navbar-list {
-    list-style-type: none; 
+/* Scroll down anim */
+.scroll-downs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
 }
 
-.navbar-list-element {
-    display: inline;
-    margin: 5px;
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
 }
 
-.navbar-element-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
 }
 
-.body-grid {
-    display: flex;
-    flex-flow: row nowrap; 
-    justify-content: space-between;
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
 }
+/* End of scroll down anim */
 
 .main {
-    padding: 20px;
-    flex-basis: 75vw;
-    order: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: "whoiam",
+                         "webs",
+                         "opinions",
+                         "contact";
+    gap: 10px;
+}
+.whoiam {
+    grid-area: "whoiam";
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.main section {
-    background-image: var(--header-bgimg);
-    background-color: var(--main-bgcolor);
-    background-blend-mode: luminosity;
-    background-attachment: fixed;
-    background-position: right;
+.whoiam-title {
+    text-align: center;
+    font-size: 3rem;
 }
 
-.sidebar {
-    padding: 20px;
-    flex-basis: 25vw;
-    order: 1;
+.whoiam-skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "personal-description", "skills";
 }
-.footer {
-    /* flexbox settings */
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 50%;
-    justify-content: space-between;
-    align-items: center;
-    /* end flexbox settings */
-    /* box general styling */
-    background-color: var(--main-bgcolor);
-    background-image: var(--header-bgimg);
-    background-blend-mode: lighten;
-    background-position: bottom;
-    background-size: cover;
-    width: 100vw;
-    height: 10vh;
+
+.personal-description {
+    grid-area: "personal-description";
+    margin: 20px;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.skills {
+    grid-area: "skills";
     padding: 20px;
-    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.37);
-    /* end of box general styling */
 }
