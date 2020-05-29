@@ -3,8 +3,8 @@
     --font-color: rgb(0, 0, 0);
     --hover-color: rgb(158, 63, 0);
     --header-bgimg: url(../img/header-background.jpeg);
-    --titles-font: 'Nunito', monospace;
-    --paragraphs-font: "Nunito", monospace;
+    --titles-font: 'Open Sans', sans-serif;
+    --paragraphs-font: "Open Sans", sans-serif;
 }
 
 *, *::before, *::after {
