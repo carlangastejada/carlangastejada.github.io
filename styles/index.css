@@ -2,7 +2,7 @@
     --main-bgcolor: #ffffff;
     --font-color: rgb(0, 0, 0);
     --hover-color: rgb(158, 63, 0);
-    --header-bgimg: url(../img/header-background.jpeg);
+    --header-bgimg: url(../img/header-bg.jpg);
     --titles-font: 'Open Sans', sans-serif;
     --paragraphs-font: "Open Sans", sans-serif;
 }
@@ -18,6 +18,7 @@ body {
 
 h1, h2 {
     font-family: var(--titles-font);
+    
 }
 
 .header {
@@ -30,6 +31,7 @@ h1, h2 {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     border-radius: 0 0 20% 20%;
     box-shadow: 0 6px 10px gray;
     height: 100vh;
@@ -38,7 +40,7 @@ h1, h2 {
 
 .logo {
     margin: 0 auto;
-    width: 60px;
+    width: 200px;
 }
 
 .slogan-githubcard-wrapper {
@@ -50,7 +52,7 @@ h1, h2 {
 
 .welcome-slogan {
     font-size: 4.5em;
-    width: 40%;
+    width: 500px;
     font-family: var(--paragraphs-font);
     text-align: left;
     color: white;
@@ -86,7 +88,7 @@ h1, h2 {
 .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "whoiam",
                          "webs",
                          "opinions",
@@ -94,7 +96,6 @@ h1, h2 {
     gap: 10px;
 }
 .whoiam {
-    grid-area: "whoiam";
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -102,23 +103,56 @@ h1, h2 {
 .whoiam-title {
     text-align: center;
     font-size: 3rem;
+    border: 5px solid black; /* Estos bordes son temporales */
+
 }
 
 .whoiam-skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "personal-description", "skills";
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid black; /* Estos bordes son temporales */
+
 }
 
 .personal-description {
-    grid-area: "personal-description";
-    margin: 20px;
-    text-align: right;
+    width: 500px;
+    text-align: left;
     font-size: 1.5em;
+    border: 5px solid black; /* Estos bordes son temporales */
 }
 
 .skills {
-    grid-area: "skills";
-    padding: 20px;
+    border: 5px solid black; /* Estos bordes son temporales */
+}
+
+.webs-i-have-made {
+    grid-area: "webs";
+    grid-area: "whoiam";
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.webs-i-have-made-title {
+    text-align: center;
+    font-size: 3rem;
+    border: 5px solid black; /* Estos bordes son temporales */
+}
+
+.webs-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black; /* Estos bordes son temporales */
+}
+
+.web-image-presentation {
+    width: 500px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px gray;
+    /* border: 5px solid black; */
 }
