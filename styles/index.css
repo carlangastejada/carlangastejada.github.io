@@ -1,10 +1,13 @@
 :root {
-    --main-bgcolor: #ffffff;
-    --font-color: rgb(0, 0, 0);
+    --main-bgcolor: rgb(12, 12, 12);
+    --secondary-color: rgb(28, 28, 28);
+    --accent-color: rgb(70, 70, 70);
+    --font-color: white;
     --hover-color: rgb(158, 63, 0);
-    --header-bgimg: url(../img/header-bg.jpg);
+    --header-footer-bgimg: url(../img/header-footer-bg.jpg);
     --titles-font: 'Open Sans', sans-serif;
-    --paragraphs-font: "Open Sans", sans-serif;
+    --general-font: "Open Sans", sans-serif;
+    --temporal-border: none;
 }
 
 *, *::before, *::after {
@@ -12,57 +15,50 @@
 }
 
 body {
-    font-family: var(--paragraphs-font);
+    font-family: var(--general-font);
     line-height: 1.5;
+    background-color: var(--main-bgcolor);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--font-color);
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--titles-font);
     
 }
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    background-image: var(--header-bgimg);
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 1fr 2fr 1fr;
+    background-image: var(--header-footer-bgimg);
     background-color: rgba(0, 0, 0, 0.616);
     background-blend-mode: darken;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     border-radius: 0 0 20% 20%;
-    box-shadow: 0 6px 10px gray;
     height: 100vh;
     padding: 15px;
+    justify-items: center;
+    align-items: center;
 }
 
 .logo {
-    margin: 0 auto;
     width: 200px;
-}
-
-.slogan-githubcard-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .welcome-slogan {
     font-size: 4.5em;
     width: 500px;
-    font-family: var(--paragraphs-font);
-    text-align: left;
+    font-family: var(--general-font);
+    text-align: center;
     color: white;
     font-weight: 400;
     vertical-align: middle;
-    /* border: 5px solid white; */
-}
-
-.github-card {
-    margin: 0;
 }
 
 .mouse {
@@ -86,25 +82,21 @@ h1, h2 {
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "whoiam",
-                         "webs",
-                         "opinions",
-                         "contact";
-    gap: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    border: var(--temporal-border);
 }
 .whoiam {
     padding-left: 20px;
     padding-right: 20px;
+    border: var(--temporal-border);
+
 }
 
 .whoiam-title {
     text-align: center;
     font-size: 3rem;
-    border: 5px solid black; /* Estos bordes son temporales */
-
+    border: var(--temporal-border);
 }
 
 .whoiam-skills-container {
@@ -112,47 +104,206 @@ h1, h2 {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    border: 5px solid black; /* Estos bordes son temporales */
-
+    border: var(--temporal-border);
 }
 
 .personal-description {
     width: 500px;
     text-align: left;
     font-size: 1.5em;
-    border: 5px solid black; /* Estos bordes son temporales */
+    border: var(--temporal-border);
 }
 
 .skills {
-    border: 5px solid black; /* Estos bordes son temporales */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    border: var(--temporal-border);
+    width: 400px;
+}
+
+.programming-language-logo {
+    width: 100px;
+    border-radius: 100%;
+    padding: 20px;
+    margin: 20px;
+    border: var(--temporal-border);
+    background-color: var(--secondary-color);
 }
 
 .webs-i-have-made {
-    grid-area: "webs";
-    grid-area: "whoiam";
     padding-left: 20px;
     padding-right: 20px;
+    border: var(--temporal-border);
+
 }
 
 .webs-i-have-made-title {
     text-align: center;
     font-size: 3rem;
-    border: 5px solid black; /* Estos bordes son temporales */
+    border: var(--temporal-border);
 }
 
 .webs-wrapper {
     display: flex;
     flex-flow: row wrap;
     flex-basis: 50%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border: 5px solid black; /* Estos bordes son temporales */
+    border: var(--temporal-border);
 }
 
 .web-image-presentation {
     width: 500px;
+    margin: 10px;
+    border-radius: 20px;
+    border: var(--temporal-border);
+}
+
+.client-opinions {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: var(--temporal-border);
+}
+
+.client-opinions-title {
+    text-align: center;
+    font-size: 3rem;
+    border: var(--temporal-border);
+}
+
+.client-opinions-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 33.33%;
+    justify-content: space-around;
+    align-items: center;
+    border: var(--temporal-border);
+}
+
+.client-opinion-card {
+    width: 350px;
     margin: 20px;
     border-radius: 20px;
-    box-shadow: 0px 2px 5px gray;
-    /* border: 5px solid black; */
+    padding: 20px;
+    border: var(--temporal-border);
+    background-color: var(--secondary-color);
+}
+
+.client-photo {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: var(--temporal-border);
+}
+
+.client-name {
+    text-align: center;
+    margin-bottom: 0;
+    border: var(--temporal-border);
+}
+
+.client-description {
+    text-align: center;
+    font-size: .90em;
+    margin-top: 0;
+    border: var(--temporal-border);
+}
+
+.client-opinion {
+    text-align: center;
+    border: var(--temporal-border);
+}
+
+.contact {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border: var(--temporal-border);
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3rem;
+    border: var(--temporal-border);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 50%;
+    justify-content: space-around;
+    align-items: center;
+    border: var(--temporal-border);
+}
+
+.contact-action-call {
+    width: 500px;
+    text-align: left;
+    font-size: 1.5em;
+    border: var(--temporal-border);
+}
+
+.contact-form-container {
+    border: none;
+    width: 400px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.name, .e-mail, .message{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.submit-button {
+    display: block;
+    background-color: white;
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 1fr 1fr;
+    background-image: var(--header-footer-bgimg);
+    background-color: rgba(0, 0, 0, 0.616);
+    background-blend-mode: darken;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 20% 20% 0 0;
+    height: 100vh;
+    padding: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-sections-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 33.33%;
+    justify-content: space-around;
+}
+
+.legal, .social, .references {
+    color: var(--font-color);
+    width: 300px;
+    margin: 20px;
+}
+
+.copyright {
+    color: var(--font-color)
 }
