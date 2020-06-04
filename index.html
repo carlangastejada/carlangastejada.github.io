@@ -25,18 +25,20 @@
 <body>
     <header class="header">
         <img src="./img/logo.svg" alt="Carlos Reyes" class="logo">
-        <p class="welcome-slogan">
+        <p class="slogan">
             Diseña tu presencia web conmigo
         </p>
-        <div class="mouse">
-            <div class="wheel">
+        <div class="mouse-box">
+            <div class="mouse">
+                <div class="wheel">
+                </div>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="whoiam" id="whoiam">
-            <h1 class="whoiam-title">¿Quién soy?</h1>
-            <div class="whoiam-skills-container">
+        <section class="section whoiam" id="whoiam">
+            <h1 class="section-title">¿Quién soy?</h1>
+            <div class="whoiam-skills-wrapper">
                 <p class="personal-description">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque aliquam illo minima recusandae
                     nam
@@ -47,19 +49,37 @@
                     minima. Eaque, facilis et? Nulla deserunt, dolor corporis perferendis necessitatibus nostrum rerum?
                     Ex, quam. Ab beatae incidunt earum.
                 </p>
-                <div class="skills">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
-                        alt="" class="programming-language-logo">
-                    <img src="https://image.flaticon.com/icons/png/512/24/24217.png" alt=""
-                        class="programming-language-logo">
-                    <img src="https://www.picuino.com/_images/css3-logo.png" alt="" class="programming-language-logo">
-                    <img src="https://www.picuino.com/_images/css3-logo.png" alt="" class="programming-language-logo">
-                    <img src="https://www.picuino.com/_images/css3-logo.png" alt="" class="programming-language-logo">
-                    <img src="https://www.picuino.com/_images/css3-logo.png" alt="" class="programming-language-logo">
-                </div>
+                <table class="skills-table">
+                    <tbody>
+                        <tr>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                            <td><img src="./img/favicon.svg" alt="" class="skill-icon"></td>
+                            <td class="skill-name">Habilidad
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
         </section>
-        <section class="webs-i-have-made" id="webs-i-have-made">
-            <h1 class="webs-i-have-made-title">Trabajos realizados</h1>
+        <section class="section webs-i-have-made" id="webs-i-have-made">
+            <h1 class="section-title">Trabajos realizados</h1>
             <div class="webs-wrapper">
                 <a href="#" class="web-image-link">
                     <img src="./img/web-i-have-made.jpg" alt="" class="web-image-presentation">
@@ -75,51 +95,52 @@
                 </a>
             </div>
         </section>
-        <section class="client-opinions" id="client-opinions">
-            <h1 class="client-opinions-title">Reseñas de mis clientes</h1>
-            <div class="client-opinions-wrapper">
-                <div class="client-opinion-card">
+        <section class="section client-reviews" id="client-reviews">
+            <h1 class="section-title">Reseñas de mis clientes</h1>
+            <div class="client-reviews-wrapper">
+                <div class="client-card">
                     <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
                     <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
                     <h3 class="client-description">Descripción</h3>
-                    <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
                         vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
                         ipsam
                         adipisci labore iure dolor error, aut quo nam!</p>
                 </div>
-                <div class="client-opinion-card">
+                <div class="client-card">
                     <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                    <h2 class="client-name">NOMBRE-CLIENTE 2</h2>
+                    <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
                     <h3 class="client-description">Descripción</h3>
-                    <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
                         vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
                         ipsam
                         adipisci labore iure dolor error, aut quo nam!</p>
                 </div>
-                <div class="client-opinion-card">
+                <div class="client-card">
                     <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                    <h2 class="client-name">NOMBRE-CLIENTE 3</h2>
+                    <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
                     <h3 class="client-description">Descripción</h3>
-                    <p class="client-opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
+                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
                         vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
                         ipsam
                         adipisci labore iure dolor error, aut quo nam!</p>
                 </div>
             </div>
         </section>
-        <section class="contact" id="contact">
-            <h1 class="contact-title">Contacto</h1>
-            <div class="contact-wrapper">
+        <section class="section contact">
+            <h1 class="section-title">Contacto</h1>
+            <div class="form-actioncall-wrapper">
                 <p class="contact-action-call">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam in
                     recusandae
                     numquam explicabo, error vero, reiciendis, quos veritatis similique eaque quisquam magnam. Id
                     veritatis
                     magnam quaerat error voluptas sapiente autem!</p>
-                <fieldset class="contact-form-container">
-                    <form class="contact-form">
+                <fieldset class="contact-form">
+                    <form>
                         <input type="text" class="name" placeholder="Nombres y apellidos" required>
                         <input type="email" class="e-mail" placeholder="ejemplo@ejemplo.com" required>
-                        <textarea name="" id="" cols="70" rows="10" class="message" required></textarea>
+                        <textarea name="" id="" cols="47" rows="10" class="message" required
+                            placeholder="Mensaje"></textarea>
                         <input type="submit" class="submit-button">
                     </form>
                 </fieldset>
@@ -127,24 +148,31 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer-sections-wrapper">
-            <p class="legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ex unde reiciendis commodi.
-                Voluptatum quam quasi nisi labore placeat esse, autem facere facilis nobis iure aut enim culpa totam
-                asperiores.</p>
-            <p class="social">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique odio inventore cumque
-                illo! Libero, praesentium corporis, tempora quasi illo nostrum deleniti ab sequi exercitationem quaerat
-                fuga
-                itaque amet, voluptatem reprehenderit.</p>
-            <p class="references">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, sapiente?
-                Suscipit
-                eveniet adipisci tempore alias distinctio excepturi cum sapiente, dolor facere atque quae vel dicta
-                animi
-                est nulla deleniti recusandae?</p>
-        </div>
-        <p class="copyright">Creado por Carlos Reyes. Derechos Reservados 2020.</p>
+        <ul class="social-media-link-list">
+            <li class="social-media-link">
+                <a href="#" class="facebook-link">
+                    <img src="./img/social-media-icons/001-facebook.svg" alt="" class="social-media-icon">
+                </a>
+            </li>
+            <li class="social-media-link">
+                <a href="#" class="instagram-link">
+                    <img src="./img/social-media-icons/011-instagram.svg" alt="" class="social-media-icon">
+                </a>
+            </li>
+            <li class="social-media-link">
+                <a href="#" class="messenger-link">
+                    <img src="./img/social-media-icons/012-messenger.svg" alt="" class="social-media-icon">
+                </a>
+            </li>
+            <li class="social-media-link">
+                <a href="#" class="twitter-link">
+                    <img src="./img/social-media-icons/002-twitter.svg" alt="" class="social-media-icon">
+                </a>
+            </li>
+        </ul>
+        <span class="copyright">Creado por Carlos Reyes. Derechos Reservados 2020.</span>
     </footer>
     <script src="./scripts/index.js"></script>
-    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </body>
 
 </html>
