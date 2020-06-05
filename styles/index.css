@@ -6,7 +6,7 @@
     --header-footer-bgimg: url(../img/header-footer-bg.jpg);
     --titles-font: 'Open Sans', sans-serif;
     --general-font: "Open Sans", sans-serif;
-    --temporal-border: 5px solid black;
+    --temporal-border: 5px solid white;
 }
 
 *, *::before, *::after {
@@ -29,9 +29,8 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
-    grid-template-areas: "logo" "slogan" "scrolldown";
+    grid-template-areas: "navbar" "slogan" "scrolldown";
     gap: 1px 1px;
-    justify-items: center;
     background-image: var(--header-footer-bgimg);
     background-color: rgba(0, 0, 0, 0.753);
     background-blend-mode: darken;
@@ -44,16 +43,41 @@ h1, h2, h3 {
     padding: 1%;
 }
 
-.logo {
-    display: block;
-    grid-area: logo;
+.navbar {
+    grid-area: navbar;
     align-self: start;
+    justify-self: right;
+    margin-top: 10px;
+}
+.navbar-links-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+    margin-block-start: 0;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--font-color);
+    margin: 5px;
+    font-weight: bold;
+}
+
+.navbar-link:hover {
+    color: var(--accent-color);
+}
+
+.logo {
+    grid-area: navbar;
+    justify-self: left;
     width: 200px;
 }
 
 .slogan {
     grid-area: slogan;
     align-self: center;
+    justify-self: center;
     font-size: 3.5em;
     font-family: var(--general-font);
     text-align: center;
@@ -92,11 +116,17 @@ h1, h2, h3 {
         opacity: 1;
     }
 }
+.arrow-scroll {
+    display: none;
+}
 
 .mouse-box {
+    grid-area: scrolldown;
     align-self: end;
+    justify-self: center;
     width: 45px;
     height: 60px;
+    margin-bottom: 5px;
 }
 
 .mouse {
@@ -132,6 +162,10 @@ h1, h2, h3 {
     }
 }
 
+.mobile-scroll {
+    display: none;
+}
+
 .main {
     display: grid;
     grid-template-columns: 1fr;
@@ -164,7 +198,7 @@ h1, h2, h3 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "desc skills";
-    gap: 1px 1px;
+    gap: 60px;
     justify-items: center;
     align-items: center;
 }
@@ -176,19 +210,50 @@ h1, h2, h3 {
     font-size: 1.5em;
 }
 
-.skills-table {
+.skills-grid {
     grid-area: skills;
-    /* padding: 20px; */
-    border-spacing: 20px;
-    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    width: 500px;
+}
+
+.skill-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "skillicon skillname";
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
 }
 
 .skill-icon {
+    grid-area: skillicon;
+    display: block;
+    justify-self: left;
     width: 100px;
     border-radius: 100%;
     padding: 15px;
-    background-color: var(--secondary-color);
+    border: 5px solid var(--accent-color);
+    margin: 10px;
 }
+
+.skill-name {
+    grid-area: skillname;
+    display: block;
+    justify-self: center;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.skill-desc {
+    display: block;
+    font-size: .70em;
+    text-align: center;
+}
+
 
 .webs-i-have-made {
     grid-area: webs;
@@ -197,8 +262,8 @@ h1, h2, h3 {
 .webs-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: ". ." ". .";
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
     gap: 60px;
     justify-items: center;
     align-items: center;
@@ -283,30 +348,14 @@ h1, h2, h3 {
     grid-area: form;
     border: none;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: white;
     padding: 20px;
     border-radius: 20px;
 }
 
-.name, .e-mail, .message {
+.form {
     width: 100%;
-    display: block;
-    padding: 10px;
-    background-color: white;
-    border: none;
-    margin: 5px;
-    border-radius: 10px;
-    outline: none;
-}
-
-.submit-button {
-    display: block;
-    background-color: white;
-    border: none;
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 0 auto;
+    height: 300px;
 }
 
 .footer {
@@ -322,7 +371,6 @@ h1, h2, h3 {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* border-radius: 20% 20% 0 0; */
     height: 10vh;
     margin-top: 5%;
     padding: 1%;
@@ -330,23 +378,118 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.social-media-link-list {
+.social-media {
+    grid-area: social;
     list-style-type: none;
-    margin: 0;
-    padding-inline-start: 0;
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.social-media-link {
-    display: inline
+.instagram, .twitter, .messenger {
+    display: inline;
 }
-
-.social-media-icon {
+.social-link {
+    text-decoration: none;
+}
+.social-icon {
     width: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .copyright {
+    grid-area: copyright;
+    display: block;
     color: var(--font-color);
-    width: 100%
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .logo {
+        justify-self: center;
+    }
+
+    .mouse-box {
+        display: none;
+    }
+
+    .arrow-scroll {
+        display: block;
+        grid-area: scrolldown;
+        justify-self: center;
+        align-self: center;
+        width: 10%;
+        animation: scroll-down 2s ease-in-out infinite;
+    }
+
+    @keyframes scroll-down {
+        from {
+            opacity: 0;
+            transform: translateY(-20%);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(20%);
+        }
+    }
+    .personal-description {
+        text-align: center;
+    }
+
+    .whoiam-skills-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "desc" "skills";
+        gap: 10px;
+    }
+
+    .skills-grid {
+        width: 90%;
+    }
+
+    .webs-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+        justify-items: center;
+        gap: 15px;
+    }
+    
+    .web-image-presentation {
+        width: 100%;
+    }
+
+    .client-reviews-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: repeat(3, 1fr);
+        grid-template-areas: "." "." "." ;
+        gap: 10px;
+    }
+
+    .client-card {
+        width: 90%;
+    }
+
+    .form-actioncall-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "actioncall" "form";
+        gap: 10px;
+    }
+
+    .contact-action-call {
+        text-align: center;
+    }
 }
