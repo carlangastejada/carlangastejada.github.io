@@ -104,6 +104,8 @@ h1, h2, h3 {
     color: white;
     font-weight: 400;
     vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .slogan::after {
