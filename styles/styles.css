@@ -29,7 +29,6 @@
     padding-block-end: 0;
 }
 
-
 h1, h2, h3 {
     font-family: var(--titles-font);
 }
@@ -54,8 +53,6 @@ h1, h2, h3 {
 .section-title {
     text-align: center;
 }
-
-
 
 .header-wrapper, .footer-wrapper {
     background-image: var(--header-footer-bgimg);
@@ -162,7 +159,7 @@ h1, h2, h3 {
     gap: var(--general-row-gap);
 }
 
-.whoiam-wrapper > h1 {
+.whoiam-wrapper>h1 {
     grid-area: whoiam-title;
 }
 
@@ -207,7 +204,6 @@ h1, h2, h3 {
     font-size: .80em;
 }
 
-
 .webs-wrapper {
     grid-area: webs;
     display: grid;
@@ -218,7 +214,7 @@ h1, h2, h3 {
     gap: var(--general-row-gap);
 }
 
-.webs-wrapper > h1 {
+.webs-wrapper>h1 {
     grid-area: webs-title;
 }
 
@@ -236,7 +232,7 @@ h1, h2, h3 {
     gap: var(--general-row-gap);
 }
 
-.client-reviews-wrapper > h1 {
+.client-reviews-wrapper>h1 {
     grid-area: reviews-title;
 }
 
@@ -273,7 +269,7 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.contact-wrapper > h1 {
+.contact-wrapper>h1 {
     grid-area: contact-title;
 }
 
@@ -298,6 +294,7 @@ h1, h2, h3 {
     border-radius: 10px;
     padding: 10px;
 }
+
 .mail, .instagram {
     background-color: white;
     color: black;
@@ -326,7 +323,6 @@ h1, h2, h3 {
         justify-self: left;
         margin-left: 10px;
     }
-
     .navbar {
         grid-area: navbar;
         justify-self: right;
@@ -335,32 +331,26 @@ h1, h2, h3 {
         margin-top: 12px;
         margin-right: 10px;
     }
-
     .navbar-links-list {
         display: flex;
         flex-flow: row nowrap;
         font-family: var(--titles-font);
         list-style: none inside;
     }
-
     .navbar-element {
         margin: 0 5px;
     }
-
     .navbar-link {
         text-decoration: none;
         color: var(--font-color);
         font-size: .95em;
     }
-
     .navbar-link:hover {
         color: var(--accent-color);
     }
-
     .arrow-scroll {
         display: none;
     }
-
     .mouse-box {
         display: block;
         grid-area: scrolldown;
@@ -370,14 +360,12 @@ h1, h2, h3 {
         height: 60px;
         margin-bottom: 12px;
     }
-    
     .mouse {
         border: 3px solid white;
         width: 100%;
         height: 100%;
         border-radius: 50px;
     }
-    
     .wheel {
         border: 4px solid white;
         width: .1%;
@@ -388,7 +376,6 @@ h1, h2, h3 {
         border-radius: 50px;
         animation: wheelupdown 1.5s ease-out infinite;
     }
-    
     @keyframes wheelupdown {
         from {
             opacity: 0;
@@ -403,11 +390,9 @@ h1, h2, h3 {
             transform: translateY(60%);
         }
     }
-
     .body-wrapper {
         font-size: 1.09em;
     }
-
     .whoiam-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -416,19 +401,15 @@ h1, h2, h3 {
         grid-auto-flow: dense;
         gap: var(--grid-gap);
     }
-
-    .whoiam > h1 {
+    .whoiam>h1 {
         grid-area: whoiam-title;
     }
-
     .personal-description {
         grid-area: personal-desc;
     }
-
     .skills-wrapper {
         grid-area: skills;
     }
-
     .webs-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -436,11 +417,9 @@ h1, h2, h3 {
         grid-auto-rows: minmax(min-content, max-content);
         gap: var(--grid-gap);
     }
-
-    .webs-wrapper > h1 {
+    .webs-wrapper>h1 {
         grid-area: webs-title;
     }
-
     .client-reviews-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -448,23 +427,18 @@ h1, h2, h3 {
         grid-template-areas: "reviews-title reviews-title reviews-title";
         gap: var(--grid-gap);
     }
-
-    .client-reviews-wrapper > h1 {
+    .client-reviews-wrapper>h1 {
         grid-area: reviews-title;
     }
-
     .client-name {
         font-size: .90em;
     }
-
     .client-description {
         font-size: .85em;
     }
-
     .client-review {
         font-size: .80em;
     }
-
     .contact-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -472,15 +446,12 @@ h1, h2, h3 {
         grid-template-areas: "contact-title contact-title" "actioncall social";
         gap: var(--grid-gap);
     }
-
-    .contact-wrapper > h1 {
+    .contact-wrapper>h1 {
         grid-area: contact-title;
     }
-
     .contact-action-call {
         grid-area: actioncall;
     }
-
     .social-wrapper {
         grid-area: social;
     }
@@ -490,19 +461,15 @@ h1, h2, h3 {
     .logo {
         width: 180px;
     }
-
     .body-wrapper {
         font-size: 1.3em;
     }
-
     .client-name {
         font-size: .90em;
     }
-
     .client-description {
         font-size: .85em;
     }
-
     .client-review {
         font-size: .80em;
     }
@@ -512,7 +479,6 @@ h1, h2, h3 {
     .logo {
         width: 200px;
     }
-
     .body-wrapper {
         font-size: 1.5em;
     }
