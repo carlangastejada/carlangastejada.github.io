@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Mi portafolio. Publicado el 05-06-2020. ¡Qué orgullo! -->
+<!-- Ya no estoy tan orgulloso. 06-06-2020 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +11,29 @@
     <meta name="copyright" content="Carlos Reyes. 2020">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Diseña tu presencia web conmigo | Carlos Reyes">
-    <meta property="og:description"
-        content="Estudiante de programación y diseño web front-end.">
+    <meta property="og:description" content="Estudiante de programación y diseño web front-end.">
     <meta property="og:url" content="https://carlangastejada.github.io">
     <meta property="og:image" content="./img/og-image.jpg">
     <meta property="og:image:width" content="1200px">
     <meta property="og:image:height" content="630px">
     <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon.svg">
     <title>Diseña tu presencia web conmigo | Carlos Reyes</title>
 </head>
 
-<body>
-    <header class="header">
+<body class="body-wrapper">
+    <header class="header-wrapper" id="top">
         <img src="./img/logo.svg" alt="Carlos Reyes" class="logo"></a>
         <nav class="navbar">
             <ul class="navbar-links-list">
-                <li class="navbar-element"><a href="#quiensoy" class="navbar-link">¿QUIÉN SOY?</a></li>
-                <li class="navbar-element"><a href="#trabajos" class="navbar-link">TRABAJOS</a></li>
-                <li class="navbar-element"><a href="#resenas" class="navbar-link">RESEÑAS</a></li>
-                <li class="navbar-element"><a href="#contacto" class="navbar-link">CONTACTO</a></li>
+                <li class="navbar-element"><a href="#whoiam" class="navbar-link">¿QUIÉN SOY?</a></li>
+                <li class="navbar-element"><a href="#webs" class="navbar-link">TRABAJOS</a></li>
+                <li class="navbar-element"><a href="#reviews" class="navbar-link">RESEÑAS</a></li>
+                <li class="navbar-element"><a href="#contact" class="navbar-link">CONTACTO</a></li>
             </ul>
         </nav>
         <p class="slogan">
@@ -41,110 +45,85 @@
                 </div>
             </div>
         </div>
-        <img src="./img/scroll-down-icon-mobile.svg" alt="" class="arrow-scroll">
+        <img src="./img/scroll-down.svg" alt="" class="arrow-scroll">
     </header>
-    <main class="main">
-        <section class="section whoiam" id="quiensoy">
+    <main class="main-wrapper">
+        <section class="whoiam-wrapper" id="whoiam">
             <h1 class="section-title">¿Quién soy?</h1>
-            <div class="whoiam-skills-wrapper">
-                <p class="personal-description">
-                    Con 20 años y nacido en Caracas, Venezuela, soy un estudiante de Ingeniería en Computación y
-                    <strong class="orangetext">programador júnior</strong>, con conocimientos
-                    <strong class="orangetext">en el área de desarrollo web <em
-                            class="orangetext">front-end</em></strong>, dispuesto a satisfacer la necesidad de
-                    presencia
-                    <em>online</em> del mercado y sus empresas, PYMEs y <em>freelancers</em> haciendo uso de las
-                    tecnologías más
-                    actualizadas disponibles para el diseño de páginas.
-                </p>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <img src="./img/skill-html5.svg" alt="" class="skill-icon">
-                        <span class="skill-name">Estructura web con HTML5 <br><span class="skill-desc">Actualmente
-                                estudiando</span></span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="./img/skill-css.svg" alt="" class="skill-icon">
-                        <span class="skill-name">Diseño con CSS3 <br><span class="skill-desc">Actualmente
-                                estudiando</span></span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="./img/skill-javascript.svg" alt="" class="skill-icon">
-                        <span class="skill-name">Programación web con JavaScript <br><span
-                                class="skill-desc">Actualmente
-                                estudiando</span></span>
-                    </div>
+            <p class="personal-description">
+                Con 20 años y nacido en Caracas, Venezuela, soy un estudiante de Ingeniería en Computación y
+                <strong class="orangetext">programador júnior</strong>, con conocimientos
+                <strong class="orangetext">en el área de desarrollo web <em class="orangetext">front-end</em></strong>,
+                dispuesto a satisfacer la necesidad de
+                presencia
+                <em>online</em> del mercado y sus empresas, PYMEs y <em>freelancers</em> haciendo uso de las
+                tecnologías más
+                actualizadas disponibles para el diseño de páginas.
+            </p>
+            <div class="skills-wrapper">
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-html5.svg" alt="" class="skill-icon">
+                    <span class="skill-name">Estructura web con HTML5 <br><span class="skill-desc">Actualmente
+                            estudiando</span></span>
                 </div>
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-css.svg" alt="" class="skill-icon">
+                    <span class="skill-name">Diseño con CSS3 <br><span class="skill-desc">Actualmente
+                            estudiando</span></span>
+                </div>
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-javascript.svg" alt="" class="skill-icon">
+                    <span class="skill-name">Programación web con JavaScript <br><span class="skill-desc">Actualmente
+                            estudiando</span></span>
+                </div>
+            </div>
         </section>
-        <section class="section webs-i-have-made" id="trabajos">
+        <section class="webs-wrapper" id="webs">
             <h1 class="section-title">Trabajos realizados</h1>
-            <div class="webs-wrapper">
-                <a href="./index.html" class="web-image-link">
-                    <img src="./img/web-i-have-made.jpg" alt="" class="web-image-presentation">
-                </a>
-            </div>
+            <a href="./index.html" class="web-image-link">
+                <img src="./img/webs/web1.jpg" alt="" class="web-image-presentation">
+            </a>
         </section>
-        <section class="section client-reviews" id="resenas">
+        <section class="client-reviews-wrapper" id="reviews">
             <h1 class="section-title">Reseñas de mis clientes</h1>
-            <div class="client-reviews-wrapper">
-                <div class="client-card">
-                    <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                    <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
-                    <h3 class="client-description">Descripción</h3>
-                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
-                        vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
-                        ipsam
-                        adipisci labore iure dolor error, aut quo nam!</p>
-                </div>
-                <div class="client-card">
-                    <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                    <h2 class="client-name">NOMBRE-CLIENTE 2</h2>
-                    <h3 class="client-description">Descripción</h3>
-                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
-                        vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
-                        ipsam
-                        adipisci labore iure dolor error, aut quo nam!</p>
-                </div>
-                <div class="client-card">
-                    <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                    <h2 class="client-name">NOMBRE-CLIENTE 3</h2>
-                    <h3 class="client-description">Descripción</h3>
-                    <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum possimus
-                        vitae temporibus, dignissimos repudiandae facilis non illo consequatur nemo veniam distinctio
-                        ipsam
-                        adipisci labore iure dolor error, aut quo nam!</p>
-                </div>
+            <div class="client-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
+                <h3 class="client-description">Descripción</h3>
+                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="client-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 2</h2>
+                <h3 class="client-description">Descripción</h3>
+                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="client-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
+                <h2 class="client-name">NOMBRE-CLIENTE 3</h2>
+                <h3 class="client-description">Descripción</h3>
+                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </section>
-        <section class="section contact" id="contacto">
+        <section class="contact-wrapper" id="contact">
             <h1 class="section-title">Contacto</h1>
-            <div class="form-actioncall-wrapper">
-                <p class="contact-action-call">Ya sea que necesites una página sencilla, un sitio entero o
-                    una aplicación web, puedes <strong class="orangetext">contactarme vía correo electrónico</strong>
-                    simplemente <strong class="orangetext">llenando el formulario.</strong>
-                    Podrás consultarme cualquier duda que tengas, solicitarme tu presupuesto o dejarme tus sugerencias.
-                </p>
-                <fieldset class="contact-form">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfoeSkOoTepVUQPaXRRFcNLdkemgV8OOTiDoRpRvqjWEV5xEA/viewform?embedded=true"
-                        class="form" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                </fieldset>
+            <p class="contact-action-call">Ya sea que necesites una página sencilla, un sitio entero o
+                una aplicación web, puedes <strong class="orangetext">contactarme vía correo electrónico</strong>
+                o a través de mis redes sociales. Podrás consultarme cualquier duda que tengas, solicitarme tu
+                presupuesto o dejarme tus sugerencias.
+            </p>
+            <div class="social-wrapper">
+                <a href="mailto:cgrt17062011@gmail.com" class="contact-link mail" target="_blank"><img
+                        src="./img/contact-icons/svg/006-gmail.svg" alt="" class="mail-icon">cgrt17062011@gmail.com</a>
+                <a href="https://instagram.com/carlangas_tejada" class="contact-link instagram" target="_blank"><img
+                        src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt=""
+                        class="instagram-icon">Instagram</a>
+                <a href="https://twitter.com/carlangas_tejad" class="contact-link twitter" target="_blank"><img
+                        src="./img/contact-icons/svg/002-twitter.svg" alt="" class="twitter-icon">Twitter</a>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <ul class="social-media">
-            <li class="instagram"><a href="https://instagram.com/carlangas_tejada" class="social-link"
-                    target="_blank"><img src="./img/social-media-icons/011-instagram.svg" alt=""
-                        class="social-icon"></a>
-            </li>
-            <li class="messenger"><a href="https://m.me/gabo.reyes.161" class="social-link" target="_blank"><img
-                        src="./img/social-media-icons/012-messenger.svg" alt="" class="social-icon"></a>
-            </li>
-            <li class="twitter"><a href="https://twitter.com/carlangas_tejad" class="social-link" target="_blank"><img
-                        src="./img/social-media-icons/002-twitter.svg" alt="" class="social-icon"></a>
-            </li>
-        </ul>
+    <footer class="footer-wrapper">
         <span class="copyright">Creado por Carlos Reyes. 2020.</span>
     </footer>
     <script src="./scripts/index.js"></script>
