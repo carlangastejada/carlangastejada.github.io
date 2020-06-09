@@ -318,6 +318,12 @@ h1, h2, h3 {
     height: 10vh;
 }
 
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .main-wrapper {
+        padding: 0 20%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .logo {
         justify-self: left;
