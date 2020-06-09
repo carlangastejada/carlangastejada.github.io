@@ -10,9 +10,16 @@
     /* Variables generales */
     --temporal-border: 5px solid white;
     --header-footer-bgimg: url(../img/bg/header-footer-bg.jpg);
+    scroll-behavior: smooth;
     /* Variables de gap para grids */
     --general-row-gap: 20px 0;
     --grid-gap: 20px;
+    /* Z index variables */
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
 }
 
 *, *::before, *::after {
