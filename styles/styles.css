@@ -393,6 +393,11 @@ h1, h2, h3 {
     .body-wrapper {
         font-size: 1.09em;
     }
+
+    .main-wrapper {
+        padding: 0 5%;
+    }
+
     .whoiam-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -464,6 +469,11 @@ h1, h2, h3 {
     .body-wrapper {
         font-size: 1.3em;
     }
+
+    .main-wrapper {
+        padding: 0 12%;
+    }
+
     .client-name {
         font-size: .90em;
     }
@@ -481,5 +491,23 @@ h1, h2, h3 {
     }
     .body-wrapper {
         font-size: 1.5em;
+    }
+
+    .main-wrapper {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .logo {
+        width: 300px;
+    }
+
+    .body-wrapper {
+        font-size: 2em;
+    }
+
+    .main-wrapper {
+        padding: 0 18%;
     }
 }
