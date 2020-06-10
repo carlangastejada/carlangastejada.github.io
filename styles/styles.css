@@ -225,9 +225,50 @@ h1, h2, h3 {
     grid-area: webs-title;
 }
 
+.web-image-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .web-image-presentation {
     display: block;
     width: 100%;
+}
+
+.web-image-name-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: var(--z-tooltip);
+    opacity: 0;
+}
+
+.web-image-name {
+    display: block;
+    font-size: 1.5em;
+    font-family: var(--titles-font);
+    color: white;
+    text-decoration: none;
+}
+
+.web-image-name-box:hover {
+    animation: web-name-fadein .1s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes web-name-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .client-reviews-wrapper {
@@ -406,11 +447,9 @@ h1, h2, h3 {
     .body-wrapper {
         font-size: 1.09em;
     }
-
     .main-wrapper {
         padding: 0 5%;
     }
-
     .whoiam-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -482,11 +521,9 @@ h1, h2, h3 {
     .body-wrapper {
         font-size: 1.3em;
     }
-
     .main-wrapper {
         padding: 0 12%;
     }
-
     .client-name {
         font-size: .90em;
     }
@@ -505,7 +542,6 @@ h1, h2, h3 {
     .body-wrapper {
         font-size: 1.5em;
     }
-
     .main-wrapper {
         padding: 0 15%;
     }
@@ -515,11 +551,9 @@ h1, h2, h3 {
     .logo {
         width: 300px;
     }
-
     .body-wrapper {
         font-size: 2em;
     }
-
     .main-wrapper {
         padding: 0 18%;
     }
