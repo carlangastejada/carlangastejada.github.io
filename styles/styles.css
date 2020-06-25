@@ -103,6 +103,10 @@ h1, h2, h3 {
     font-size: 2.25em;
 }
 
+.social-header-wrapper {
+    display: none;
+}
+
 .slogan::after {
     content: "";
     border: 3px solid var(--accent-color);
@@ -339,7 +343,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: left;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 10px;
 }
 
@@ -373,7 +377,15 @@ h1, h2, h3 {
 }
 
 @media screen and (min-width: 768px) {
+    .header-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "logo navbar" "slogan contact-header" "scrolldown scrolldown";
+        gap: var(--grid-gap);
+    }
     .logo {
+        grid-area: logo;
         justify-self: left;
         margin-left: 10px;
     }
@@ -391,6 +403,9 @@ h1, h2, h3 {
         font-family: var(--titles-font);
         list-style: none inside;
     }
+    .navbar-links-list li:last-child {
+        display: none;
+    }
     .navbar-element {
         margin: 0 5px;
     }
@@ -401,6 +416,13 @@ h1, h2, h3 {
     }
     .navbar-link:hover {
         color: var(--accent-color);
+    }
+    .social-header-wrapper {
+        grid-area: contact-header;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--general-row-gap);
+        margin: 0 8%;
     }
     .arrow-scroll {
         display: none;
@@ -497,7 +519,7 @@ h1, h2, h3 {
         font-size: .80em;
     }
     .contact-wrapper {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         grid-template-areas: "contact-title contact-title" "actioncall social";
@@ -551,6 +573,20 @@ h1, h2, h3 {
     .logo {
         width: 300px;
     }
+
+    .social-header-wrapper {
+        font-size: 2.5rem;
+    }
+
+    .contact-link {
+        border-radius: 60px;
+        padding-left: 30px;
+    }
+
+    .mail-icon, .instagram-icon, .twitter-icon {
+        width: 100px;
+    }
+
     .body-wrapper {
         font-size: 2em;
     }
