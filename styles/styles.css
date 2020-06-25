@@ -68,6 +68,7 @@ h1, h2, h3 {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
 }
 
@@ -558,6 +559,7 @@ h1, h2, h3 {
 }
 
 @media screen and (min-width: 1440px) {
+
     .logo {
         width: 200px;
     }
