@@ -12,8 +12,7 @@
     --header-footer-bgimg: url(../img/bg/header-footer-bg.jpg);
     scroll-behavior: smooth;
     /* Variables de gap para grids */
-    --general-row-gap: 20px 0;
-    --grid-gap: 20px;
+    --grid-gap: 20px 0;
     /* Z index variables */
     --z-back: -10;
     --z-normal: 1;
@@ -36,11 +35,12 @@
     padding-block-end: 0;
 }
 
-h1, h2, h3 {
+.headline1, .headline2, .headline3 {
     font-family: var(--titles-font);
+    text-align: center;
 }
 
-.body-wrapper {
+.body {
     font-family: var(--general-font);
     display: grid;
     grid-template-columns: 1fr;
@@ -50,18 +50,15 @@ h1, h2, h3 {
     background-color: var(--main-color);
     color: var(--font-color);
     line-height: 1.6;
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
 }
 
-.orangetext {
+.orange-text {
     color: var(--accent-color);
 }
 
-.section-title {
-    text-align: center;
-}
 
-.header-wrapper, .footer-wrapper {
+.header, .footer {
     background-image: var(--header-footer-bgimg);
     background-color: rgba(0, 0, 0, 0.753);
     background-blend-mode: darken;
@@ -72,7 +69,7 @@ h1, h2, h3 {
     width: 100%;
 }
 
-.header-wrapper {
+.header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
@@ -81,7 +78,7 @@ h1, h2, h3 {
     height: 100vh;
 }
 
-.logo {
+.header__logo {
     grid-area: navbar;
     justify-self: center;
     align-self: start;
@@ -93,22 +90,19 @@ h1, h2, h3 {
     display: none;
 }
 
-.slogan {
+.header__slogan {
+    font-family: var(--titles-font);
+    text-align: center;
     grid-area: slogan;
     align-self: center;
     justify-self: center;
-    text-align: center;
     color: white;
     font-weight: 600;
     margin: 0 20px;
     font-size: 2.25em;
 }
 
-.social-header-wrapper {
-    display: none;
-}
-
-.slogan::after {
+.header__slogan::after {
     content: "";
     border: 3px solid var(--accent-color);
     margin-left: 5px;
@@ -124,7 +118,11 @@ h1, h2, h3 {
     }
 }
 
-.arrow-scroll {
+.mouse-box {
+    display: none;
+}
+
+.scroll-down-arrow {
     display: block;
     grid-area: scrolldown;
     justify-self: center;
@@ -148,51 +146,49 @@ h1, h2, h3 {
     }
 }
 
-.mouse-box {
-    display: none;
-}
-
-.main-wrapper {
+.main {
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, minmax(min-content, max-content));
     grid-template-areas: "whoiam" "webs" "opinions" "contact";
     padding: 0 20px;
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
 }
 
-.whoiam-wrapper {
+.about-me {
     grid-area: whoiam;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: repeat(3, minmax(min-content, max-content));
     grid-template-areas: "whoiam-title" "personal-description" "skills";
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
 }
 
-.whoiam-wrapper>h1 {
+.about-me__headline {
+    font-family: var(--titles-font);
+    text-align: center;
     grid-area: whoiam-title;
 }
 
-.personal-description {
+.about-me__desc {
     grid-area: personal-description;
     text-align: left;
     align-self: center;
     justify-self: center;
 }
 
-.skills-wrapper {
+.skills {
     grid-area: skills;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(min-content, max-content);
     grid-auto-flow: row;
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
     width: 100%;
 }
 
-.skill-card {
+.skills__card {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -202,7 +198,7 @@ h1, h2, h3 {
     padding: 15px;
 }
 
-.skill-icon {
+.skills__icon {
     display: block;
     width: 50px;
     height: 50px;
@@ -212,37 +208,41 @@ h1, h2, h3 {
     margin-right: 20px;
 }
 
-.skill-desc {
+.skills__name {
     font-size: .80em;
 }
 
-.webs-wrapper {
+/* VERIFICAR LOS ESTILOS DE LA DESCRIPCION DE HABILIDADES */
+
+.portfolio {
     grid-area: webs;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "webs-title";
     grid-auto-rows: minmax(min-content, max-content);
     grid-auto-flow: row;
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
 }
 
-.webs-wrapper>h1 {
+.portfolio__headline {
+    text-align: center;
+    font-family: var(--titles-font);
     grid-area: webs-title;
 }
 
-.web-image-link {
+.project-card {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.web-image-presentation {
+.project-card__thumbnail {
     display: block;
     width: 100%;
 }
 
-.web-image-name-box {
+.project-card__name-box {
     position: absolute;
     display: flex;
     align-items: center;
@@ -254,15 +254,7 @@ h1, h2, h3 {
     opacity: 0;
 }
 
-.web-image-name {
-    display: block;
-    font-size: 1.5em;
-    font-family: var(--titles-font);
-    color: white;
-    text-decoration: none;
-}
-
-.web-image-name-box:hover {
+.project-card__name-box:hover {
     animation: web-name-fadein .1s linear;
     animation-fill-mode: forwards;
 }
@@ -276,20 +268,30 @@ h1, h2, h3 {
     }
 }
 
-.client-reviews-wrapper {
+.project-card__name {
+    display: block;
+    font-size: 1.5em;
+    font-family: var(--titles-font);
+    color: white;
+    text-decoration: none;
+}
+
+.testimonials {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, minmax(min-content, max-content));
     grid-template-areas: "reviews-title" "." "." ".";
     grid-auto-flow: row;
-    gap: var(--general-row-gap);
+    gap: var(---grid-gap);
 }
 
-.client-reviews-wrapper>h1 {
+.testimonials__headline {
+    text-align: center;
+    font-family: var(--titles-font);
     grid-area: reviews-title;
 }
 
-.client-card {
+.testimonial-card {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -298,72 +300,76 @@ h1, h2, h3 {
     padding: 20px;
 }
 
-.client-photo {
+.testimonial-card__client-photo {
     display: block;
     width: 80px;
     margin: 0 auto;
     border-radius: 100%;
 }
 
-.client-name, .client-description {
+.testimonial-card__client-name, 
+.testimonial-card__client-desc, 
+.testimonial-card__client-review {
     text-align: center;
 }
 
-.client-review {
-    text-align: center;
-}
-
-.contact-wrapper {
+.contact-section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, minmax(min-content, max-content));
     grid-template-areas: "contact-title" "actioncall" "social";
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
     align-items: center;
 }
 
-.contact-wrapper>h1 {
+.contact-section__headline {
+    font-family: var(--titles-font);
+    text-align: center;
     grid-area: contact-title;
 }
 
-.contact-action-call {
+.contact-section__action-call {
     grid-area: actioncall;
 }
 
-.social-wrapper {
+.contact {
     grid-area: social;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(min-content, max-content);
-    gap: var(--general-row-gap);
+    gap: var(--grid-gap);
 }
 
-.contact-link {
+.contact__link-mail, 
+.contact__link-instagram {
     text-decoration: none;
-    color: var(--font-color);
     display: flex;
     align-items: center;
     justify-content: left;
     border-radius: 25px;
     padding: 10px;
-}
-
-.mail, .instagram {
     background-color: white;
     color: black;
 }
 
-.twitter {
+.contact__link-twitter {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
     background-color: rgb(0, 119, 255);
 }
 
-.mail-icon, .instagram-icon, .twitter-icon {
+.contact__icon {
     display: inline-block;
     width: 50px;
     margin-right: 20px;
 }
 
-.footer-wrapper {
+.footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -422,7 +428,7 @@ h1, h2, h3 {
         grid-area: contact-header;
         display: grid;
         grid-template-columns: 1fr;
-        gap: var(--general-row-gap);
+        gap: var(--grid-gap);
         margin: 0 8%;
     }
     .arrow-scroll {

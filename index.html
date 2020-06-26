@@ -7,14 +7,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Estudiante de computación, programación y diseño web front-end. Autodidacta de nacimiento y con una sed infinita de experiencia en el área de la tecnología.">
+    <meta name="description" content="Estudiante de computación, programación y diseño web front-end. Autodidacta de nacimiento y con una sed infinita de experiencia en el área de la tecnología.">
     <meta name="author" content="Carlos Reyes">
     <meta name="copyright" content="Carlos Reyes. 2020">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Diseña tu presencia web conmigo | Carlos Reyes">
-    <meta property="og:description"
-        content="Estudiante de computación, programación y diseño web front-end. Autodidacta de nacimiento y con una sed infinita de experiencia en el área de la tecnología.">
+    <meta property="og:description" content="Estudiante de computación, programación y diseño web front-end. Autodidacta de nacimiento y con una sed infinita de experiencia en el área de la tecnología.">
     <meta property="og:url" content="https://carlangastejada.github.io">
     <meta property="og:image" content="./img/og-image.jpg">
     <meta property="og:image:width" content="1200px">
@@ -22,131 +20,182 @@
     <meta property="og:image:alt" content="Portafolio web">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon.svg">
-    <title>Diseña tu presencia web conmigo | Carlos Reyes</title>
+    <title>
+        Diseña tu presencia web conmigo | Carlos Reyes
+    </title>
 </head>
 
-<body class="body-wrapper">
-    <header class="header-wrapper" id="top" itemscope itemtype="https://schema.org/Brand">
-        <img src="./img/logo.svg" alt="Carlos Reyes" class="logo" itemprop="logo">
+<body class="body">
+    <header class="header" id="top" itemscope itemtype="https://schema.org/Brand">
+        <img src="./img/logo.svg" alt="Carlos Reyes" class="header__logo" itemprop="logo">
         <nav class="navbar">
-            <ul class="navbar-links-list">
-                <li class="navbar-element"><a href="#whoiam" class="navbar-link">¿QUIÉN SOY?</a></li>
-                <li class="navbar-element"><a href="#webs" class="navbar-link">TRABAJOS</a></li>
-                <li class="navbar-element"><a href="#reviews" class="navbar-link">RESEÑAS</a></li>
-                <li class="navbar-element"><a href="#contact" class="navbar-link">CONTACTO</a></li>
+            <ul class="links-list">
+                <li class="links-list__button">
+                    <a href="#about-me" class="links-list__link">
+                        SOBRE MÍ
+                    </a>
+                </li>
+                <li class="links-list__button">
+                    <a href="#portfolio" class="links-list__link">
+                        PORTAFOLIO
+                    </a>
+                </li>
+                <li class="links-list__button">
+                    <a href="#reviews" class="links-list__link">
+                        OPINIONES
+                    </a>
+                </li>
+                <li class="links-list__button">
+                    <a href="#contact" class="links-list__link">
+                        CONTACTO
+                    </a>
+                </li>
             </ul>
         </nav>
-        <p class="slogan" itemprop="slogan">
+        <h1 class="header__slogan" itemprop="slogan">
             Diseña tu presencia web conmigo
-        </p>
-        <div class="social-header-wrapper">
-            <a href="mailto:cgrt17062011@gmail.com" class="contact-link mail" target="_blank" itemprop="email"><img
-                    src="./img/contact-icons/svg/006-gmail.svg" alt="" class="mail-icon">cgrt17062011@gmail.com</a>
-            <a href="https://instagram.com/carlangas_tejada" class="contact-link instagram" target="_blank"><img
-                    src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt=""
-                    class="instagram-icon">Instagram</a>
-            <a href="https://twitter.com/carlangas_tejad" class="contact-link twitter" target="_blank"><img
-                    src="./img/contact-icons/svg/002-twitter.svg" alt="" class="twitter-icon">Twitter</a>
-        </div>
+        </h1>
         <div class="mouse-box">
-            <div class="mouse">
-                <div class="wheel">
+            <div class="mouse-box__mouse">
+                <div class="mouse-box__wheel">
                 </div>
             </div>
         </div>
-        <img src="./img/scroll-down.svg" alt="" class="arrow-scroll">
+        <img src="./img/scroll-down.svg" alt="" class="scroll-down-arrow">
     </header>
-    <main class="main-wrapper">
-        <section class="whoiam-wrapper" id="whoiam" itemscope itemtype="https://schema.org/Person">
-            <h1 class="section-title">¿Quién soy?</h1>
-            <p class="personal-description">
-                Mi nombre es <span itemprop="givenName">Carlos Reyes.</span> Con 20 años y
-                nacido en <span itemprop="birthPlace">Caracas,
-                    Venezuela</span>, soy un <span itemprop="hasOccupation"><strong class="orangetext">estudiante
-                        de</strong> Ingeniería en Computación y
-                    <strong class="orangetext">programación</strong></span>, con conocimientos básicos
-                <strong class="orangetext">en el área de desarrollo web <em class="orangetext">front-end</em></strong>,
-                dispuesto a satisfacer la necesidad de
-                presencia
-                <em>online</em> del mercado y sus empresas, PYMEs y <em>freelancers,</em> haciendo uso de las
-                tecnologías más
-                actualizadas disponibles para el diseño de páginas.
+    <main class="main">
+        <section class="about-me" id="about-me" itemscope itemtype="https://schema.org/Person">
+            <h2 class="about-me__headline">
+                Sobre mí
+            </h2>
+            <p class="about-me__desc">
+                Mi nombre es <span itemprop="givenName">Carlos Reyes.</span> Con 20 años y 
+                nacido en <span itemprop="birthPlace">Caracas, Venezuela</span>, soy un 
+                <span itemprop="hasOccupation"><strong class="orange-text">estudiante de</strong> 
+                Ingeniería en Computación y <strong class="orange-text">programación</strong></span>, 
+                con conocimientos básicos <strong class="orange-text">en el área de desarrollo web 
+                <em class="orange-text">front-end</em></strong>, dispuesto a satisfacer la necesidad 
+                de presencia <em>online</em> del mercado y sus empresas, PYMEs y <em>freelancers, </em>
+                haciendo uso de las tecnologías más actualizadas disponibles para el diseño de páginas.
             </p>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <img src="./img/skills-icons/skill-html5.svg" alt="HTML5" class="skill-icon">
-                    <span class="skill-name" itemprop="knowsAbout">Estructura web con HTML5. <br><span
-                            class="skill-desc">Actualmente
-                            estudiando</span></span>
+            <div class="skills">
+                <div class="skills__card">
+                    <img src="./img/skills-icons/skill-html5.svg" alt="HTML5" class="skills__icon">
+                    <span class="skills__name" itemprop="knowsAbout">
+                        Estructura web con HTML5.
+                        <br>
+                        <span class="skills__desc">
+                            Actualmente estudiando
+                        </span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <img src="./img/skills-icons/skill-css.svg" alt="CSS3" class="skill-icon">
-                    <span class="skill-name" itemprop="knowsAbout">Diseño con CSS3. <br><span
-                            class="skill-desc">Actualmente
-                            estudiando</span></span>
+                <div class="skills__card">
+                    <img src="./img/skills-icons/skill-css.svg" alt="CSS3" class="skills__icon">
+                    <span class="skills__name" itemprop="knowsAbout">
+                        Diseño con CSS3. 
+                        <br>
+                        <span class="skills__desc">
+                            Actualmente estudiando
+                        </span>
+                    </span>
                 </div>
-                <div class="skill-card">
-                    <img src="./img/skills-icons/skill-javascript.svg" alt="JavaScript" class="skill-icon">
-                    <span class="skill-name">Programación web con JavaScript. <br><span class="skill-desc">Actualmente
-                            estudiando</span></span>
+                <div class="skills__card">
+                    <img src="./img/skills-icons/skill-javascript.svg" alt="JavaScript" class="skills__icon">
+                    <span class="skills__name">
+                        Programación web con JavaScript. 
+                        <br>
+                        <span class="skills__desc">
+                            Actualmente estudiando
+                        </span>
+                    </span>
                 </div>
             </div>
         </section>
-        <section class="webs-wrapper" id="webs">
-            <h1 class="section-title">Trabajos realizados</h1>
-            <a href="#" class="web-image-link">
-                <img src="./img/webs/web1.jpg" alt="Mi portafolio web" class="web-image-presentation">
-                <div class="web-image-name-box">
-                    <span class="web-image-name">Mi portafolio</span>
+        <section class="portfolio" id="portfolio">
+            <h2 class="portfolio__headline">
+                Portafolio
+            </h2>
+            <a href="#" class="project-card">
+                <img src="./img/webs/web1.jpg" alt="Mi portafolio web" class="project-card__thumbnail">
+                <div class="project-card__name-box">
+                    <span class="project-card__name">
+                        Mi portafolio
+                    </span>
                 </div>
             </a>
         </section>
-        <section class="client-reviews-wrapper" id="reviews">
-            <h1 class="section-title">Opiniones de mis clientes</h1>
-            <div class="client-card">
-                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                <h2 class="client-name">NOMBRE-CLIENTE 1</h2>
-                <h3 class="client-description">Descripción</h3>
-                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <section class="testimonials" id="testimonials">
+            <h2 class="testimonials__headline">
+                Opiniones de mis clientes
+            </h2>
+            <div class="testimonial-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
+                <span class="testimonial-card__client-name">
+                    NOMBRE-CLIENTE 1
+                </span>
+                <span class="testimonial-card__client-desc">
+                    Descripción
+                </span>
+                <p class="testimonial-card__client-review">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
             </div>
-            <div class="client-card">
-                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                <h2 class="client-name">NOMBRE-CLIENTE 2</h2>
-                <h3 class="client-description">Descripción</h3>
-                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="testimonial-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
+                <span class="testimonial-card__client-name">
+                    NOMBRE-CLIENTE 2
+                </span>
+                <span class="testimonial-card__client-desc">
+                    Descripción
+                </span>
+                <p class="testimonial-card__client-review">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
             </div>
-            <div class="client-card">
-                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="client-photo">
-                <h2 class="client-name">NOMBRE-CLIENTE 3</h2>
-                <h3 class="client-description">Descripción</h3>
-                <p class="client-review">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="testimonial-card">
+                <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
+                <span class="testimonial-card__client-name">
+                    NOMBRE-CLIENTE 3
+                </span>
+                <span class="testimonial-card__client-desc">
+                    Descripción
+                </span>
+                <p class="testimonial-card__client-review">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
             </div>
         </section>
-        <section class="contact-wrapper" id="contact" itemscope itemtype="https://schema.org/ContactPoint">
-            <h1 class="section-title">Contacto</h1>
-            <p class="contact-action-call">Aunque hoy en día sigo estudiando y recién he empezado, puedes <strong
-                    class="orangetext">contactarme vía correo electrónico</strong>
-                o a través de mis redes sociales. Tendrás la oportunidad de consultarme cualquier duda que tengas,
-                pedirme un posible presupuesto o dejarme tus sugerencias. <strong class="orangetext">Estoy dispuesto a
-                    ayudar y aprender en la medida de mis posibilidades actuales.</strong>
+        <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPoint">
+            <h2 class="contact-section__headline">
+                Contacto
+            </h2>
+            <p class="contact-section__action-call">
+                Aunque hoy en día sigo estudiando y recién he empezado, puedes 
+                <strong class="orange-text">contactarme vía correo electrónico</strong> o a través de mis redes 
+                sociales. Tendrás la oportunidad de consultarme cualquier duda que tengas, pedirme un posible 
+                presupuesto o dejarme tus sugerencias. <strong class="orange-text">Estoy dispuesto a ayudarte y 
+                aprender en la medida de mis posibilidades actuales.</strong>
             </p>
-            <div class="social-wrapper">
-                <a href="mailto:cgrt17062011@gmail.com" class="contact-link mail" target="_blank" itemprop="email"><img
-                        src="./img/contact-icons/svg/006-gmail.svg" alt="" class="mail-icon">cgrt17062011@gmail.com</a>
-                <a href="https://instagram.com/carlangas_tejada" class="contact-link instagram" target="_blank"><img
-                        src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt=""
-                        class="instagram-icon">Instagram</a>
-                <a href="https://twitter.com/carlangas_tejad" class="contact-link twitter" target="_blank"><img
-                        src="./img/contact-icons/svg/002-twitter.svg" alt="" class="twitter-icon">Twitter</a>
+            <div class="contact">
+                <a href="mailto:cgrt17062011@gmail.com" class="contact__link-mail" target="_blank" itemprop="email">
+                    <img src="./img/contact-icons/svg/006-gmail.svg" alt="" class="contact__icon">
+                    cgrt17062011@gmail.com
+                </a>
+                <a href="https://instagram.com/carlangas_tejada" class="contact__link-instagram" target="_blank">
+                    <img src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt="" class="contact__icon">
+                        Instagram
+                    </a>
+                <a href="https://twitter.com/carlangas_tejad" class="contact__link-twitter" target="_blank">
+                    <img src="./img/contact-icons/svg/002-twitter.svg" alt="" class="contact__icon">
+                    Twitter
+                </a>
             </div>
         </section>
     </main>
-    <footer class="footer-wrapper">
-        <span class="copyright">Creado por Carlos Reyes. 2020.</span>
+    <footer class="footer">
+        <span class="footer__copyright">Creado por Carlos Reyes. 2020.</span>
     </footer>
     <script src="./scripts/index.js"></script>
 </body>
