@@ -28,7 +28,7 @@
 </head>
 
 <body class="body">
-    <header class="header" id="top" itemscope itemtype="https://schema.org/Brand">
+    <header class="header" id="top">
         <img src="./img/logo.svg" alt="Carlos Reyes" class="logo" itemprop="logo">
         <nav class="navbar">
             <ul class="links-list">
@@ -54,20 +54,22 @@
                 </li>
             </ul>
         </nav>
-        <span class="slogan" itemprop="slogan">
-            Diseña tu presencia web conmigo
-        </span>
-        <div class="mouse-box">
-            <div class="mouse-box__mouse">
-                <div class="mouse-box__wheel">
-                </div>
-            </div>
-        </div>
-        <img src="./img/scroll-down.svg" alt="" class="scroll-down-arrow">
     </header>
     <main class="main">
+        <section class="welcome" id="welcome" itemscope itemtype="https://schema.org/Brand">
+            <span class="welcome_slogan" itemprop="slogan">
+                Diseña tu presencia web conmigo
+            </span>
+            <div class="mouse-box">
+                <div class="mouse-box__mouse">
+                    <div class="mouse-box__wheel">
+                    </div>
+                </div>
+            </div>
+            <img src="./img/scroll-down.svg" alt="" class="scroll-down-arrow">
+        </section>
         <section class="about-me" id="about-me" itemscope itemtype="https://schema.org/Person">
-            <h1 class="about-me__headline">
+            <h1 class="headline1">
                 Sobre mí
             </h1>
             <p class="about-me__desc">
@@ -81,9 +83,9 @@
                 haciendo uso de las tecnologías más actualizadas disponibles para el diseño de páginas.
             </p>
             <div class="skills">
-                <div class="skills__card">
-                    <img src="./img/skills-icons/skill-html5.svg" alt="HTML5" class="skills__icon">
-                    <span class="skills__name" itemprop="knowsAbout">
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-html5.svg" alt="HTML5" class="skill-card__icon">
+                    <span class="skill-card__name" itemprop="knowsAbout">
                         Estructura web con HTML5.
                         <br>
                         <span class="skills__desc">
@@ -91,9 +93,9 @@
                         </span>
                     </span>
                 </div>
-                <div class="skills__card">
-                    <img src="./img/skills-icons/skill-css.svg" alt="CSS3" class="skills__icon">
-                    <span class="skills__name" itemprop="knowsAbout">
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-css.svg" alt="CSS3" class="skill-card__icon">
+                    <span class="skill-card__name" itemprop="knowsAbout">
                         Diseño con CSS3. 
                         <br>
                         <span class="skills__desc">
@@ -101,9 +103,9 @@
                         </span>
                     </span>
                 </div>
-                <div class="skills__card">
-                    <img src="./img/skills-icons/skill-javascript.svg" alt="JavaScript" class="skills__icon">
-                    <span class="skills__name">
+                <div class="skill-card">
+                    <img src="./img/skills-icons/skill-javascript.svg" alt="JavaScript" class="skill-card__icon">
+                    <span class="skill-card__name">
                         Programación web con JavaScript. 
                         <br>
                         <span class="skills__desc">
@@ -114,7 +116,7 @@
             </div>
         </section>
         <section class="portfolio" id="portfolio">
-            <h1 class="portfolio__headline">
+            <h1 class="headline1">
                 Portafolio
             </h1>
             <a href="#" class="project-card">
@@ -127,7 +129,7 @@
             </a>
         </section>
         <section class="testimonials" id="testimonials">
-            <h1 class="testimonials__headline">
+            <h1 class="headline1">
                 Opiniones de mis clientes
             </h1>
             <div class="testimonial-card">
@@ -167,28 +169,28 @@
                 </p>
             </div>
         </section>
-        <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPoint">
-            <h1 class="contact-section__headline">
+        <section class="contact" id="contact" itemscope itemtype="https://schema.org/ContactPoint">
+            <h1 class="headline1">
                 Contacto
             </h1>
-            <p class="contact-section__action-call">
+            <p class="contact__action-call">
                 Aunque hoy en día sigo estudiando y recién he empezado, puedes 
                 <strong class="orange-text">contactarme vía correo electrónico</strong> o a través de mis redes 
                 sociales. Tendrás la oportunidad de consultarme cualquier duda que tengas, pedirme un posible 
                 presupuesto o dejarme tus sugerencias. <strong class="orange-text">Estoy dispuesto a ayudarte y 
                 aprender en la medida de mis posibilidades actuales.</strong>
             </p>
-            <div class="contact">
-                <a href="mailto:cgrt17062011@gmail.com" class="contact__link-mail" target="_blank" itemprop="email">
-                    <img src="./img/contact-icons/svg/006-gmail.svg" alt="" class="contact__icon">
+            <div class="contact-box">
+                <a href="mailto:cgrt17062011@gmail.com" class="contact-box__link" target="_blank" itemprop="email">
+                    <img src="./img/contact-icons/svg/006-gmail.svg" alt="" class="contact-box__icon">
                     cgrt17062011@gmail.com
                 </a>
-                <a href="https://instagram.com/carlangas_tejada" class="contact__link-instagram" target="_blank">
-                    <img src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt="" class="contact__icon">
+                <a href="https://instagram.com/carlangas_tejada" class="contact-box__link" target="_blank">
+                    <img src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt="" class="contact-box__icon">
                         Instagram
                     </a>
-                <a href="https://twitter.com/carlangas_tejad" class="contact__link-twitter" target="_blank">
-                    <img src="./img/contact-icons/svg/002-twitter.svg" alt="" class="contact__icon">
+                <a href="https://twitter.com/carlangas_tejad" class="contact-box__link" target="_blank">
+                    <img src="./img/contact-icons/svg/002-twitter.svg" alt="" class="contact-box__icon">
                     Twitter
                 </a>
             </div>

@@ -9,7 +9,7 @@
     --font-color: white;
     /* Variables generales */
     --temporal-border: 5px solid white;
-    --header-footer-bgimg: url(../img/bg/header-footer-bg.jpg);
+    --welcome-footer-bgimg: url(../img/bg/header-footer-bg.jpg);
     scroll-behavior: smooth;
     /* Variables de gap para grids */
     --grid-gap: 20px 0;
