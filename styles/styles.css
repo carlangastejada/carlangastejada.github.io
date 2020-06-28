@@ -11,7 +11,7 @@
     /* Variables generales */
     --content-centering: 0 10%;
     --border-radius: 10px;
-    --welcome-bg: url(../img/bg/header-footer-bg.jpg);
+    --welcome-bg: url(../img/bg/welcome-bg.jpg);
     scroll-behavior: smooth;
     /* Variables de gap para grids */
     --row-gap: 20px 0;
