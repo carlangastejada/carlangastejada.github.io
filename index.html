@@ -53,8 +53,38 @@
                 </li>
             </ul>
         </nav>
-        <img src="./img/menu.svg" alt="Menu" id="menu" class="menu">
+        <img src="./img/menu.svg" alt="Menu" id="menu-open-button" class="menu-button">
     </header>
+    <div class="menu" id="menu">
+        <span class="menu__title">MENÚ</span>
+        <nav class="menu-navbar">
+            <ul class="menu-links-list">
+                <li class="menu-links-list__button">
+                    <a href="#about-me" class="menu-links-list__link">
+                        SOBRE MÍ
+                    </a>
+                </li>
+                <li class="menu-links-list__button">
+                    <a href="#portfolio" class="menu-links-list__link">
+                        PORTAFOLIO
+                    </a>
+                </li>
+                <li class="menu-links-list__button">
+                    <a href="#testimonials" class="menu-links-list__link">
+                        OPINIONES
+                    </a>
+                </li>
+                <li class="menu-links-list__button">
+                    <a href="#contact" class="menu-links-list__link">
+                        CONTACTO
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu__close-button" id="menu-close-button">
+            X
+        </div>
+    </div>
     <main class="main">
         <section class="welcome" id="welcome" itemscope itemtype="https://schema.org/Brand">
             <span class="welcome__slogan" itemprop="slogan">
@@ -195,7 +225,7 @@
     </main>
     <footer class="footer">
         <span class="footer__copyright">© Carlos Reyes. 2020.</span>
-        <img src="./img/favicon.svg" alt="" class="go-top">
+        <img src="./img/favicon.svg" alt="" class="go-top" id="go-top">
     </footer>
     <script src="./scripts/index.js"></script>
 </body>
