@@ -10,6 +10,7 @@
     --font-color: white;
     /* Variables generales */
     --content-centering: 0 10%;
+    --border-radius: 10px;
     --welcome-bg: url(../img/bg/header-footer-bg.jpg);
     scroll-behavior: smooth;
     /* Variables de gap para grids */
@@ -37,7 +38,7 @@
     font-family: var(--general-font);
     font-weight: 400;
     line-height: 1.5;
-    color: white;
+    color: var(--font-color);
 }
 
 .headline1, 
@@ -54,16 +55,16 @@
 
 .header {
     grid-area: header;
+    position: sticky;
+    top: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    background-color: var(--secondary-color);
-    position: sticky;
-    top: 0;
-    z-index: var(--z-fixed);
     padding: 0 5%;
+    background-color: var(--secondary-color);
+    z-index: var(--z-fixed);
 }
 
 .logo {
@@ -118,7 +119,6 @@
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    
 }
 
 .welcome__slogan::after {
@@ -186,7 +186,7 @@
 
 .skill-card {
     background-color: var(--secondary-color);
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -223,7 +223,7 @@
     gap: var(--row-gap);
     width: 100%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background-color: var(--secondary-color)
 }
 
@@ -235,7 +235,7 @@
 .project-card__thumbnail {
     display: block;
     width: 100%;
-    border-radius: 5px;
+    border-radius: calc(var(--border-radius) / 2);
 }
 
 .project-card__name {
@@ -274,7 +274,7 @@
 .testimonial-card__client-photo {
     display: block;
     width: 100%;
-    border-radius: 5px;
+    border-radius: calc(var(--border-radius) / 2);
 }
 
 .testimonial-card__client-name {
@@ -322,7 +322,7 @@
     align-items: center;
     padding: 20px;
     background-color: var(--secondary-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     text-decoration: none;
     color: white;
     width: 100%;
@@ -339,8 +339,106 @@
     grid-area: footer;
     display: flex;
     flex-flow: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    z-index: var(--z-fixed)
+    z-index: var(--z-fixed);
+    padding: 0 5%;
+}
+
+.language {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+}
+
+@media screen and (orientation: landscape) {
+    :root {
+        --content-centering: 0 20%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --content-centering: 0 5%;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: block
+    }
+
+    .links-list {
+        list-style: none inside;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .links-list__button {
+        margin: 0 5px;
+    }
+
+    .links-list__link {
+        text-decoration: none;
+        color: var(--font-color);
+        font-family: var(--titles-font);
+    }
+
+    .links-list__link:hover {
+        color: var(--accent-color);
+    }
+
+    .headline1 {
+        grid-column: span 4;
+    }
+
+    .about-me {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(min-content, max-content);
+        gap: var(--general-gap);
+    }
+
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+
+    .contact {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --content-centering: 0 10%;
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --content-centering: 0 20%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    :root {
+        --content-centering: 0 30%;
+    }
+
 }
