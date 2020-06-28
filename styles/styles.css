@@ -346,7 +346,7 @@
     padding: 0 5%;
 }
 
-.language {
+.go-top {
     display: block;
     width: 25px;
     cursor: pointer;
@@ -427,6 +427,12 @@
 
     .portfolio {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    :root {
+        --content-centering : 0 15%;
     }
 }
 
