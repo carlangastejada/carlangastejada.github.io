@@ -20,7 +20,6 @@
     <meta property="og:image:alt" content="Portafolio web">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon.svg">
     <title>
         Diseña tu presencia web conmigo | Carlos Reyes
@@ -54,26 +53,21 @@
                 </li>
             </ul>
         </nav>
+        <img src="./img/menu.svg" alt="" class="menu">
     </header>
     <main class="main">
         <section class="welcome" id="welcome" itemscope itemtype="https://schema.org/Brand">
-            <span class="welcome_slogan" itemprop="slogan">
+            <span class="welcome__slogan" itemprop="slogan">
                 Diseña tu presencia web conmigo
             </span>
-            <div class="mouse-box">
-                <div class="mouse-box__mouse">
-                    <div class="mouse-box__wheel">
-                    </div>
-                </div>
-            </div>
-            <img src="./img/scroll-down.svg" alt="" class="scroll-down-arrow">
+            <img src="./img/scroll-down.svg" alt="" class="welcome__scrolldown">
         </section>
         <section class="about-me" id="about-me" itemscope itemtype="https://schema.org/Person">
             <h1 class="headline1">
                 Sobre mí
             </h1>
             <p class="about-me__desc">
-                Mi nombre es <span itemprop="givenName">Carlos Reyes.</span> Con 20 años y 
+                Mi Charles Wilson es <span itemprop="givenName">Carlos Reyes.</span> Con 20 años y 
                 nacido en <span itemprop="birthPlace">Caracas, Venezuela</span>, soy un 
                 <span itemprop="hasOccupation"><strong class="orange-text">estudiante de</strong> 
                 Ingeniería en Computación y <strong class="orange-text">programación</strong></span>, 
@@ -88,7 +82,7 @@
                     <span class="skill-card__name" itemprop="knowsAbout">
                         Estructura web con HTML5.
                         <br>
-                        <span class="skills__desc">
+                        <span class="skill-card__desc">
                             Actualmente estudiando
                         </span>
                     </span>
@@ -98,7 +92,7 @@
                     <span class="skill-card__name" itemprop="knowsAbout">
                         Diseño con CSS3. 
                         <br>
-                        <span class="skills__desc">
+                        <span class="skill-card__desc">
                             Actualmente estudiando
                         </span>
                     </span>
@@ -108,7 +102,7 @@
                     <span class="skill-card__name">
                         Programación web con JavaScript. 
                         <br>
-                        <span class="skills__desc">
+                        <span class="skill-card__desc">
                             Actualmente estudiando
                         </span>
                     </span>
@@ -119,54 +113,57 @@
             <h1 class="headline1">
                 Portafolio
             </h1>
-            <a href="#" class="project-card">
-                <img src="./img/webs/web1.jpg" alt="Mi portafolio web" class="project-card__thumbnail">
-                <div class="project-card__name-box">
-                    <span class="project-card__name">
-                        Mi portafolio
-                    </span>
-                </div>
-            </a>
+            <div class="project-card">
+                <a href="#" class="project-card__link">
+                    <img src="./img/webs/web1.jpg" alt="Mi portafolio web" class="project-card__thumbnail">
+                </a>
+                <span class="project-card__name">
+                    Mi portafolio
+                </span>
+                <span class="project-card__desc">
+                    Este es mi primer proyecto oficial de muchos. Está hecho completamente desde cero.
+                </span>
+            </div>
         </section>
         <section class="testimonials" id="testimonials">
             <h1 class="headline1">
-                Opiniones de mis clientes
+                Opiniones
             </h1>
             <div class="testimonial-card">
                 <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
                 <span class="testimonial-card__client-name">
-                    NOMBRE-CLIENTE 1
+                    Charles Wilson
                 </span>
                 <span class="testimonial-card__client-desc">
-                    Descripción
+                    CEO de CBsoftware C.A
                 </span>
-                <p class="testimonial-card__client-review">
+                <span class="testimonial-card__client-review">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                </span>
             </div>
             <div class="testimonial-card">
                 <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
                 <span class="testimonial-card__client-name">
-                    NOMBRE-CLIENTE 2
+                    Charles Wilson
                 </span>
                 <span class="testimonial-card__client-desc">
-                    Descripción
+                    CEO de CBsoftware C.A
                 </span>
-                <p class="testimonial-card__client-review">
+                <span class="testimonial-card__client-review">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                </span>
             </div>
             <div class="testimonial-card">
                 <img src="https://www.thispersondoesnotexist.com/image" alt="" class="testimonial-card__client-photo">
                 <span class="testimonial-card__client-name">
-                    NOMBRE-CLIENTE 3
+                    Charles Wilson
                 </span>
                 <span class="testimonial-card__client-desc">
-                    Descripción
+                    CEO de CBsoftware C.A
                 </span>
-                <p class="testimonial-card__client-review">
+                <span class="testimonial-card__client-review">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                </span>
             </div>
         </section>
         <section class="contact" id="contact" itemscope itemtype="https://schema.org/ContactPoint">
@@ -183,7 +180,7 @@
             <div class="contact-box">
                 <a href="mailto:cgrt17062011@gmail.com" class="contact-box__link" target="_blank" itemprop="email">
                     <img src="./img/contact-icons/svg/006-gmail.svg" alt="" class="contact-box__icon">
-                    cgrt17062011@gmail.com
+                    Correo personal
                 </a>
                 <a href="https://instagram.com/carlangas_tejada" class="contact-box__link" target="_blank">
                     <img src="./img/contact-icons/svg/001-instagram-bosquejado.svg" alt="" class="contact-box__icon">
