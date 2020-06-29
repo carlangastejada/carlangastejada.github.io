@@ -29,7 +29,9 @@
 <body class="body">
     <header class="header">
         <img src="./img/logo.svg" alt="Carlos Reyes" class="logo" itemprop="logo" id="logo">
-        <nav class="navbar">
+        <img src="./img/menu.svg" alt="Menu" id="menu-open-button" class="menu-button">
+        <nav class="menu" id="menu">
+            <span class="menu__title">MENÚ</span>
             <ul class="links-list">
                 <li class="links-list__button">
                     <a href="#about-me" class="links-list__link">
@@ -52,39 +54,11 @@
                     </a>
                 </li>
             </ul>
+            <div class="menu__close-button" id="menu-close-button">
+                X
+            </div>
         </nav>
-        <img src="./img/menu.svg" alt="Menu" id="menu-open-button" class="menu-button">
     </header>
-    <div class="menu" id="menu">
-        <span class="menu__title">MENÚ</span>
-        <nav class="menu-navbar">
-            <ul class="menu-links-list">
-                <li class="menu-links-list__button">
-                    <a href="#about-me" class="menu-links-list__link">
-                        SOBRE MÍ
-                    </a>
-                </li>
-                <li class="menu-links-list__button">
-                    <a href="#portfolio" class="menu-links-list__link">
-                        PORTAFOLIO
-                    </a>
-                </li>
-                <li class="menu-links-list__button">
-                    <a href="#testimonials" class="menu-links-list__link">
-                        OPINIONES
-                    </a>
-                </li>
-                <li class="menu-links-list__button">
-                    <a href="#contact" class="menu-links-list__link">
-                        CONTACTO
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="menu__close-button" id="menu-close-button">
-            X
-        </div>
-    </div>
     <main class="main">
         <section class="welcome" id="welcome" itemscope itemtype="https://schema.org/Brand">
             <span class="welcome__slogan" itemprop="slogan">
