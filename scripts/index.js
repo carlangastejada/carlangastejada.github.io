@@ -9,7 +9,9 @@ menubtn.addEventListener('click', () => menu.style.visibility = 'visible')
 menuclose.addEventListener('click', () => menu.style.visibility = 'hidden')
 gotop.addEventListener('click', () => window.scrollTo(0, 0))
 logo.addEventListener('click', () => window.scrollTo(0, 0))
-
 for (item of clickeditem) {
     item.addEventListener('click', () => menu.style.visibility = 'hidden')
 }
+
+
+
