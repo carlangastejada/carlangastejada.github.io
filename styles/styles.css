@@ -121,10 +121,11 @@
 
 .menu__close-button {
     position: absolute;
-    font-size: 2em;
-    top: 10px;
-    right: 20px;
+    display: block;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
+    width: 30px;
 }
 
 .main {
@@ -348,6 +349,7 @@
     justify-items: center;
     align-items: center;
     padding: var(--content-centering);
+    padding-bottom: 5vh;
 }
 
 .contact-box {
