@@ -440,14 +440,14 @@
         color: var(--accent-color);
     }
 
-    .headline1 {
-        grid-column: span 4;
-    }
-
     .about-me {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
+    }
+
+    .about-me .headline1 {
+        grid-column: span 2;
     }
 
     .portfolio {
@@ -456,16 +456,28 @@
         gap: var(--general-gap);
     }
 
+    .portfolio .headline1 {
+        grid-column: span 2;
+    }
+
     .testimonials {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
     }
 
+    .testimonials .headline1 {
+        grid-column: span 3;
+    }
+
     .contact {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
+    }
+
+    .contact .headline1 {
+        grid-column: span 2;
     }
 }
 
@@ -476,6 +488,10 @@
 
     .portfolio {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio .headline1 {
+        grid-column: span 3;
     }
 }
 
