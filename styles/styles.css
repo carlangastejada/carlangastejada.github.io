@@ -86,13 +86,12 @@
     top: 0;
     left: 0;
     z-index: var(--z-modal);
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .95);
     height: 100vh;
     width: 100vw;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px);
 }
 
 .menu__title {
