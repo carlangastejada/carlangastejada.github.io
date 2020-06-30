@@ -27,4 +27,3 @@ window.addEventListener('load', enableMenu)
 window.addEventListener('resize', enableMenu)
 logo.addEventListener('click', () => scrollTo(0, 0))
 gotop.addEventListener('click', () => scrollTo(0, 0))
-
