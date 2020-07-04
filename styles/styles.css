@@ -92,7 +92,7 @@
     justify-content: center;
     align-items: center;
     transition: transform .2s ease-in-out;
-    transform: translateX(100%);
+    transform: translateX(200%)
 }
 
 .menu__title {
@@ -394,7 +394,6 @@
 .footer__logo {
     display: block;
     width: 25px;
-    cursor: pointer;
 }
 
 @media screen and (orientation: landscape) {
