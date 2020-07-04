@@ -53,6 +53,25 @@
     color: var(--accent-color);
 }
 
+.splash-screen {
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    transition: opacity .1s linear 1s;
+    opacity: 1;
+}
+  
+.splash-screen__logo {
+    display: block;
+    width: 100px;
+}
+
 .header {
     grid-area: header;
     position: sticky;
