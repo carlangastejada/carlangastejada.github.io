@@ -1,6 +1,4 @@
-const gotop = document.getElementById('go-top')
 const logo = document.getElementById('logo')
-
 const menubtn = document.getElementById('menu-open-button')
 const menuclose = document.getElementById('menu-close-button')
 const menu = document.getElementById('menu')
@@ -26,4 +24,3 @@ const enableMenu = () => {
 window.addEventListener('load', enableMenu)
 window.addEventListener('resize', enableMenu)
 logo.addEventListener('click', () => scrollTo(0, 0))
-gotop.addEventListener('click', () => scrollTo(0, 0))
