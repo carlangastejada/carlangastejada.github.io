@@ -1,0 +1,39 @@
+.splash-screen {
+    background-color: rgb(12, 12, 12);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-screen__logo {
+    position: relative;
+    display: block;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.splash-screen__loader {
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0);
+    /* Light grey */
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
