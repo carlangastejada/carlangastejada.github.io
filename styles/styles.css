@@ -32,19 +32,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 2fr 10vh;
-    grid-template-areas: "header" 
-                         "main" 
-                         "footer";
+    grid-template-areas: "header" "main" "footer";
     font-family: var(--general-font);
     font-weight: 400;
     line-height: 1.5;
     color: var(--font-color);
 }
 
-.headline1, 
-.headline2, 
-.headline3, 
-.headline4 {
+.headline1, .headline2, .headline3, .headline4 {
     font-family: var(--titles-font);
     font-weight: 700;
 }
@@ -65,11 +60,6 @@
     z-index: var(--z-modal);
     transition: opacity .1s linear 1s;
     opacity: 1;
-}
-  
-.splash-screen__logo {
-    display: block;
-    width: 100px;
 }
 
 .header {
@@ -151,12 +141,8 @@
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, minmax(min-content, max-content)); 
-    grid-template-areas: "welcome" 
-                         "about-me" 
-                         "portfolio" 
-                         "testimonials" 
-                         "contact";
+    grid-template-rows: repeat(5, minmax(min-content, max-content));
+    grid-template-areas: "welcome" "about-me" "portfolio" "testimonials" "contact";
     gap: var(--row-gap);
     background: var(--main-color);
 }
@@ -425,11 +411,9 @@
     :root {
         --content-centering: 0 5%;
     }
-    
     .menu-button {
         display: none;
     }
-
     .menu {
         visibility: visible;
         display: block;
@@ -439,11 +423,9 @@
         background-color: transparent;
         backdrop-filter: none;
     }
-
     .menu__title {
         display: none;
     }
-    
     .links-list {
         list-style: none;
         display: flex;
@@ -451,65 +433,52 @@
         align-items: center;
         font-size: 1em;
     }
-
     .links-list__button {
         margin-right: 20px;
     }
-
     .links-list__button:last-of-type {
         margin-right: 0;
     }
-    
     .links-list__link {
         text-decoration: none;
         color: var(--font-color);
         font-family: var(--titles-font);
     }
-    
     .links-list__link:hover {
         color: var(--accent-color);
     }
-    
     .menu__close-button {
         display: none;
     }
-
     .about-me {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
     }
-
     .about-me .headline1 {
         grid-column: span 2;
     }
-
     .portfolio {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(min-content, max-content);
         gap: var(--general-gap);
     }
-
     .portfolio .headline1 {
         grid-column: span 2;
     }
-
     .testimonials {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
     }
-
     .testimonials .headline1 {
         grid-column: span 3;
     }
-
     .contact {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
     }
-
     .contact .headline1 {
         grid-column: span 2;
     }
@@ -519,11 +488,9 @@
     :root {
         --content-centering: 0 10%;
     }
-
     .portfolio {
         grid-template-columns: repeat(3, 1fr);
     }
-
     .portfolio .headline1 {
         grid-column: span 3;
     }
@@ -531,7 +498,7 @@
 
 @media screen and (min-width: 1366px) {
     :root {
-        --content-centering : 0 15%;
+        --content-centering: 0 15%;
     }
 }
 
@@ -545,5 +512,4 @@
     :root {
         --content-centering: 0 30%;
     }
-
 }
