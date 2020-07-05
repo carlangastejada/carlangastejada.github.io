@@ -1,8 +1,11 @@
-const logo = document.getElementById('logo')
-const menu_open_btn = document.getElementById('menu-open-button')
-const menu_close_btn = document.getElementById('menu-close-button')
+const logo = document.getElementById('header__logo')
+logo.addEventListener('click', () => scrollTo(0, 0))
+
+
+const menu_open_btn = document.getElementById('header__menu-button')
+const menu_close_btn = document.getElementById('menu__close-button')
 const menu = document.getElementById('menu')
-const navbar_links = document.getElementsByClassName('links-list__link')
+const menu_links = document.getElementsByClassName('menu__link')
 
 const showMenu = () => menu.style.transform = 'translateX(0)'
 const closeMenu = () => menu.style.transform = 'translateX(100%)'
@@ -11,15 +14,14 @@ const enableMenu = () => {
         menu.style.transform = 'translateX(100%)'
         menu_open_btn.addEventListener('click', showMenu)
         menu_close_btn.addEventListener('click', closeMenu)
-        for (item of navbar_links) item.addEventListener('click', closeMenu)
+        for (item of menu_links) item.addEventListener('click', closeMenu)
     } else {
         menu_open_btn.removeEventListener('click', showMenu)
         menu_close_btn.removeEventListener('click', closeMenu)
-        for (item of navbar_links) item.removeEventListener('click', closeMenu)
+        for (item of menu_links) item.removeEventListener('click', closeMenu)
         menu.style.transform = 'translateX(0)'
     }
 }
 
 window.addEventListener('load', enableMenu)
 window.addEventListener('resize', enableMenu)
-logo.addEventListener('click', () => scrollTo(0, 0))

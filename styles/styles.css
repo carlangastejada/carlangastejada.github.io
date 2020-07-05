@@ -48,20 +48,6 @@
     color: var(--accent-color);
 }
 
-.splash-screen {
-    background-color: var(--main-color);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    z-index: var(--z-modal);
-    transition: opacity .1s linear 1s;
-    opacity: 1;
-}
-
 .header {
     grid-area: header;
     position: sticky;
@@ -76,13 +62,13 @@
     z-index: var(--z-fixed);
 }
 
-.logo {
+.header__logo {
     display: block;
     width: 150px;
     cursor: pointer;
 }
 
-.menu-button {
+.header__menu-button {
     display: block;
     width: 25px;
     cursor: pointer;
@@ -108,7 +94,7 @@
     font-size: 1.2em
 }
 
-.links-list {
+.menu__links-list {
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -118,13 +104,13 @@
     font-size: 1.5em;
 }
 
-.links-list__link {
+.menu__link {
     text-decoration: none;
     color: var(--font-color);
     font-family: var(--titles-font)
 }
 
-.links-list__link:hover {
+.menu__link:hover {
     color: var(--accent-color);
 }
 
@@ -214,7 +200,7 @@
     }
 }
 
-.about-me {
+.aboutme {
     grid-area: about-me;
     display: grid;
     grid-template-columns: 1fr;
@@ -411,7 +397,7 @@
     :root {
         --content-centering: 0 5%;
     }
-    .menu-button {
+    .header__menu-button {
         display: none;
     }
     .menu {
@@ -426,36 +412,36 @@
     .menu__title {
         display: none;
     }
-    .links-list {
+    .menu__links-list {
         list-style: none;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         font-size: 1em;
     }
-    .links-list__button {
+    .menu__element {
         margin-right: 20px;
     }
-    .links-list__button:last-of-type {
+    .menu__element:last-of-type {
         margin-right: 0;
     }
-    .links-list__link {
+    .menu__link {
         text-decoration: none;
         color: var(--font-color);
         font-family: var(--titles-font);
     }
-    .links-list__link:hover {
+    .menu__link:hover {
         color: var(--accent-color);
     }
     .menu__close-button {
         display: none;
     }
-    .about-me {
+    .aboutme {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(min-content, max-content));
         gap: var(--general-gap);
     }
-    .about-me .headline1 {
+    .aboutme .headline1 {
         grid-column: span 2;
     }
     .portfolio {

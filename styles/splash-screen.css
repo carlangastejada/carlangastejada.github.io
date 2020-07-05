@@ -7,6 +7,9 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    z-index: var(--z-modal);
+    transition: opacity .1s linear 1s;
+    opacity: 1;
 }
 
 .splash-screen__logo {

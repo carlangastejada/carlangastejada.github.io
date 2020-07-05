@@ -35,48 +35,48 @@
     <script src="./scripts/index.js" async></script>
 </head>
 <body class="body" id="body">
-    <header class="header" itemscope itemtype="https://schema.org/Brand">
-        <img src="./img/logo.svg" alt="Carlos Reyes" class="logo" itemprop="logo" id="logo">
-        <img src="./img/menu.svg" alt="Menu" id="menu-open-button" class="menu-button">
+    <header class="header" itemscope itemtype="https://schema.org/Brand" id="header">
+        <img src="./img/logo.svg" alt="Carlos Reyes" class="header__logo" itemprop="logo" id="header__logo">
+        <img src="./img/menu.svg" alt="Menu" id="header__menu-button" class="header__menu-button">
         <nav class="menu" id="menu">
             <span class="menu__title">MENÚ</span>
-            <ul class="links-list">
-                <li class="links-list__button">
-                    <a href="#about-me" class="links-list__link">
+            <ul class="menu__links-list">
+                <li class="menu__element">
+                    <a href="#aboutme" class="menu__link">
                         SOBRE MÍ
                     </a>
                 </li>
-                <li class="links-list__button">
-                    <a href="#portfolio" class="links-list__link">
+                <li class="menu__element">
+                    <a href="#portfolio" class="menu__link">
                         PORTAFOLIO
                     </a>
                 </li>
-                <li class="links-list__button">
-                    <a href="#testimonials" class="links-list__link">
+                <li class="menu__element">
+                    <a href="#testimonials" class="menu__link">
                         OPINIONES
                     </a>
                 </li>
-                <li class="links-list__button">
-                    <a href="#contact" class="links-list__link">
+                <li class="menu__element">
+                    <a href="#contact" class="menu__link">
                         CONTACTO
                     </a>
                 </li>
             </ul>
-            <img src="./img/close.svg" class="menu__close-button" id="menu-close-button">
+            <img src="./img/close.svg" class="menu__close-button" id="menu__close-button">
         </nav>
     </header>
-    <main class="main">
+    <main class="main" id="main">
         <section class="welcome" id="welcome" itemscope itemtype="https://schema.org/Brand">
             <span class="welcome__slogan" itemprop="slogan">
                 Diseña tu presencia web conmigo
             </span>
             <img src="./img/scroll-down.svg" alt="" class="welcome__scrolldown">
         </section>
-        <section class="about-me" id="about-me" itemscope itemtype="https://schema.org/Person">
+        <section class="aboutme" id="aboutme" itemscope itemtype="https://schema.org/Person">
             <h1 class="headline1">
                 Sobre mí
             </h1>
-            <p class="about-me__desc">
+            <p class="aboutme__desc">
                 Mi nombre es <span itemprop="givenName">Carlos Reyes.</span> Con 20 años y 
                 nacido en <span itemprop="birthPlace">Caracas, Venezuela</span>, soy un 
                 <span itemprop="hasOccupation"><strong class="orange-text">estudiante de</strong> 
@@ -217,10 +217,9 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <span class="footer__copyright">© Carlos Reyes. 2020.</span>
         <img src="./img/favicon.svg" alt="Carlos Reyes" class="footer__logo">
     </footer>
 </body>
-
 </html>
