@@ -170,6 +170,7 @@
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
+    padding: 0 20px;
 }
 
 .welcome__slogan::after {
