@@ -1,0 +1,26 @@
+.welcome__slogan {
+    display: block;
+    font-family: $titles-font;
+    font-size: 2rem;
+    font-weight: $titles-font-weight;
+    text-align: center;
+}
+
+.welcome__slogan::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.2em;
+    border: 3px solid $accent-color;
+    margin-left: 5px;
+    animation: caret .5s steps(2) infinite;
+}
+
+@keyframes caret {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}

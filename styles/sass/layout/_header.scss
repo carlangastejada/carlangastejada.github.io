@@ -1,0 +1,13 @@
+.header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5%;
+    background-color: $secondary-color;
+    z-index: $z-fixed;
+}

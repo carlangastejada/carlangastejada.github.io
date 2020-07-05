@@ -1,0 +1,10 @@
+.aboutme {
+    grid-area: about-me;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    gap: $row-gap;
+    justify-items: center;
+    align-items: center;
+    padding: $content-centering;
+}

@@ -1,0 +1,16 @@
+.welcome {
+    position: relative;
+    grid-area: welcome;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, .8);
+    background-image: $welcome-bg;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

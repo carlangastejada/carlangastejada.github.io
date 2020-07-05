@@ -1,0 +1,309 @@
+@import "base/normalize";
+@import "utilities/colorpallette";
+@import "utilities/typo";
+@import "utilities/gridgaps";
+@import "utilities/zindex";
+@import "utilities/generalsettings";
+
+@import "layout/body";
+
+@import "layout/header";
+@import "components/header-logo";
+@import "components/header-menu-button";
+@import "components/menu";
+
+@import "layout/main";
+@import "layout/welcome";
+@import "components/welcome-slogan";
+@import "components/welcome-scrolldown";
+
+@import "layout/aboutme";
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    justify-items: left;
+    align-items: center;
+    gap: var(--row-gap);
+    width: 100%;
+}
+
+.skill-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    width: 100%;
+}
+
+.skill-card__icon {
+    display: block;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.skill-card__desc {
+    color: var(--accent-color);
+}
+
+.portfolio {
+    grid-area: portfolio;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: var(--row-gap);
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    gap: var(--row-gap);
+    width: 100%;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color)
+}
+
+.project-card__link {
+    display: block;
+    width: 100%;
+}
+
+.project-card__thumbnail {
+    display: block;
+    width: 100%;
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+.project-card__name {
+    display: block;
+    font-size: 1.5em;
+    font-family: var(--titles-font);
+}
+
+.project-card__desc {
+    display: block;
+}
+
+.testimonials {
+    grid-area: testimonials;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(min-content, max-content));
+    gap: var(--row-gap);
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+}
+
+.testimonial-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(min-content, max-content));
+    gap: var(--row-gap);
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-color)
+}
+
+.testimonial-card__client-photo {
+    display: block;
+    width: 100%;
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+.testimonial-card__client-name {
+    font-family: var(--titles-font);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.testimonial-card__client-desc {
+    font-family: var(--titles-font);
+    font-size: .90em;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial-card__client-review {
+    font-style: italic;
+}
+
+.contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    gap: var(--row-gap);
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+    padding-bottom: 20px;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    justify-items: left;
+    align-items: center;
+    gap: var(--row-gap);
+    width: 100%;
+}
+
+.contact-box__link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.contact-box__icon {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    z-index: var(--z-normal);
+    padding: 0 5%;
+}
+
+.footer__logo {
+    display: block;
+    width: 25px;
+}
+
+@media screen and (orientation: landscape) {
+    :root {
+        --content-centering: 0 20%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --content-centering: 0 5%;
+    }
+    .header__menu-button {
+        display: none;
+    }
+    .menu {
+        visibility: visible;
+        display: block;
+        position: static;
+        height: min-content;
+        width: max-content;
+        background-color: transparent;
+        backdrop-filter: none;
+    }
+    .menu__title {
+        display: none;
+    }
+    .menu__links-list {
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-size: 1em;
+    }
+    .menu__element {
+        margin-right: 20px;
+    }
+    .menu__element:last-of-type {
+        margin-right: 0;
+    }
+    .menu__link {
+        text-decoration: none;
+        color: var(--font-color);
+        font-family: var(--titles-font);
+    }
+    .menu__link:hover {
+        color: var(--accent-color);
+    }
+    .menu__close-button {
+        display: none;
+    }
+    .aboutme {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+    .aboutme .headline1 {
+        grid-column: span 2;
+    }
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(min-content, max-content);
+        gap: var(--general-gap);
+    }
+    .portfolio .headline1 {
+        grid-column: span 2;
+    }
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+    .testimonials .headline1 {
+        grid-column: span 3;
+    }
+    .contact {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: var(--general-gap);
+    }
+    .contact .headline1 {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --content-centering: 0 10%;
+    }
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio .headline1 {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    :root {
+        --content-centering: 0 15%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --content-centering: 0 20%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    :root {
+        --content-centering: 0 30%;
+    }
+}
