@@ -23,8 +23,8 @@
     position: absolute;
     border: 5px solid rgba(255, 255, 255, 0);
     /* Light grey */
-    border-top: 5px solid orange;
-    border-bottom: 5px solid orange;
+    border-top: 5px solid $accent-color;
+    border-bottom: 5px solid $accent-color;
     /* Blue */
     border-radius: 50%;
     width: 90px;

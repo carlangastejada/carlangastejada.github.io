@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 5%;
+    padding: var(--content-centering);
     background-color: $secondary-color;
     z-index: $z-fixed;
 }

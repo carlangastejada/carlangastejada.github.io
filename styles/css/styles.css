@@ -157,8 +157,8 @@ template {
     .headline1, .headline2, .headline3, .headline4 {
       grid-column: 1 / -1; } }
 
-.orange-text {
-  color: orange; }
+.important-text {
+  color: #00e1ff; }
 
 :root {
   scroll-behavior: smooth;
@@ -205,8 +205,8 @@ template {
   position: absolute;
   border: 5px solid rgba(255, 255, 255, 0);
   /* Light grey */
-  border-top: 5px solid orange;
-  border-bottom: 5px solid orange;
+  border-top: 5px solid #00e1ff;
+  border-bottom: 5px solid #00e1ff;
   /* Blue */
   border-radius: 50%;
   width: 90px;
@@ -238,7 +238,7 @@ template {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 0 5%;
+  padding: var(--content-centering);
   background-color: #181818;
   z-index: 100; }
 
@@ -313,7 +313,7 @@ template {
   font-family: "Lato", sans-serif; }
 
 .menu__link:hover {
-  color: orange; }
+  color: #00e1ff; }
 
 .menu__close-button {
   position: absolute;
@@ -363,7 +363,7 @@ template {
   display: inline-block;
   vertical-align: middle;
   height: 1.2em;
-  border: 3px solid orange;
+  border: 3px solid #00e1ff;
   margin-left: 5px;
   animation: caret 0.5s steps(2) infinite; }
 
@@ -431,7 +431,7 @@ template {
   margin-right: 20px; }
 
 .skill-card__desc {
-  color: orange; }
+  color: #00e1ff; }
 
 .portfolio {
   grid-area: portfolio;
@@ -571,7 +571,7 @@ template {
   justify-content: space-between;
   align-items: center;
   background-color: #181818;
-  padding: 0 5%; }
+  padding: var(--content-centering); }
 
 .footer__logo {
   display: block;
