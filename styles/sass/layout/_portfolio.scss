@@ -1,0 +1,20 @@
+.portfolio {
+    grid-area: portfolio;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: $row-gap;
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+
+    @media #{$mobile-tablet} {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(min-content, max-content);
+        gap: $general-gap;
+    }
+
+    @media #{$laptop-small} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

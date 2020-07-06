@@ -5,10 +5,12 @@
         rows: 10vh 2fr 10vh;
         areas: "header" "main" "footer"
     }
+
     font: {
         family: $body-font;
         weight: $body-font-weight;
     }
+    
     line-height: $line-height;
     color: $font-color;
 }

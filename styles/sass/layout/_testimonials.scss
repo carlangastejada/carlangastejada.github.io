@@ -1,0 +1,16 @@
+.testimonials {
+    grid-area: testimonials;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(min-content, max-content));
+    gap: $row-gap;
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+
+    @media #{$mobile-tablet} {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: $general-gap;
+    }
+}

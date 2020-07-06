@@ -1,0 +1,17 @@
+.contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    gap: $row-gap;
+    justify-items: center;
+    align-items: center;
+    padding: var(--content-centering);
+    padding-bottom: 20px;
+
+    @media #{$mobile-tablet} {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: $general-gap;
+    }
+}

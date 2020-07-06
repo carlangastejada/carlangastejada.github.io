@@ -153,12 +153,71 @@ template {
 .headline1, .headline2, .headline3, .headline4 {
   font-family: "Lato", sans-serif;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    .headline1, .headline2, .headline3, .headline4 {
+      grid-column: 1 / -1; } }
 
 .orange-text {
   color: orange; }
 
 :root {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  --content-centering: 0 10%; }
+  @media (orientation: landscape) {
+    :root {
+      --content-centering: 0 20%; } }
+  @media (min-width: 768px) {
+    :root {
+      --content-centering: 0 5%; } }
+  @media (min-width: 1024px) {
+    :root {
+      --content-centering: 0 10%; } }
+  @media (min-width: 1366px) {
+    :root {
+      --content-centering: 0 15%; } }
+  @media (min-width: 1440px) {
+    :root {
+      --content-centering: 0 20%; } }
+  @media (min-width: 2560px) {
+    :root {
+      --content-centering: 0 30%; } }
+
+.splash-screen {
+  background-color: #0c0c0c;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity .1s linear 1s;
+  opacity: 1; }
+
+.splash-screen__logo {
+  position: relative;
+  display: block;
+  width: 70px;
+  border-radius: 100%; }
+
+.splash-screen__loader {
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0);
+  /* Light grey */
+  border-top: 5px solid orange;
+  border-bottom: 5px solid orange;
+  /* Blue */
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin .8s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 .body {
   display: grid;
@@ -192,6 +251,9 @@ template {
   display: block;
   width: 25px;
   cursor: pointer; }
+  @media (min-width: 768px) {
+    .header__menu-button {
+      display: none; } }
 
 .menu {
   display: flex;
@@ -205,11 +267,23 @@ template {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: translateX(200%); }
+  @media (min-width: 768px) {
+    .menu {
+      visibility: visible;
+      display: block;
+      position: static;
+      height: min-content;
+      width: max-content;
+      background-color: transparent;
+      backdrop-filter: none; } }
 
 .menu__title {
   font-size: 1.2em; }
+  @media (min-width: 768px) {
+    .menu__title {
+      display: none; } }
 
 .menu__links-list {
   padding-left: 0;
@@ -219,6 +293,19 @@ template {
   justify-content: center;
   align-items: center;
   font-size: 1.5em; }
+  @media (min-width: 768px) {
+    .menu__links-list {
+      flex-flow: row nowrap;
+      align-items: center;
+      font-size: 1em; } }
+
+@media (min-width: 768px) {
+  .menu__element {
+    margin-right: 20px; } }
+
+@media (min-width: 768px) {
+  .menu__element:last-of-type {
+    margin-right: 0; } }
 
 .menu__link {
   text-decoration: none;
@@ -235,6 +322,9 @@ template {
   right: 30px;
   cursor: pointer;
   width: 30px; }
+  @media (min-width: 768px) {
+    .menu__close-button {
+      display: none; } }
 
 .main {
   grid-area: main;
@@ -309,7 +399,12 @@ template {
   gap: 20px 0;
   justify-items: center;
   align-items: center;
-  padding: 0 10%; }
+  padding: var(--content-centering); }
+  @media (min-width: 768px) {
+    .aboutme {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, minmax(min-content, max-content));
+      gap: 20px; } }
 
 .skills {
   display: grid;
@@ -317,12 +412,12 @@ template {
   grid-auto-rows: minmax(min-content, max-content);
   justify-items: left;
   align-items: center;
-  gap: var(--row-gap);
+  gap: 20px 0;
   width: 100%; }
 
 .skill-card {
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius);
+  background-color: #181818;
+  border-radius: 10px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -336,27 +431,35 @@ template {
   margin-right: 20px; }
 
 .skill-card__desc {
-  color: var(--accent-color); }
+  color: orange; }
 
 .portfolio {
   grid-area: portfolio;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(min-content, max-content);
-  gap: var(--row-gap);
+  gap: 20px 0;
   justify-items: center;
   align-items: center;
   padding: var(--content-centering); }
+  @media (min-width: 768px) {
+    .portfolio {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(min-content, max-content);
+      gap: 20px; } }
+  @media (min-width: 1024px) {
+    .portfolio {
+      grid-template-columns: repeat(3, 1fr); } }
 
 .project-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
-  gap: var(--row-gap);
+  gap: 20px 0;
   width: 100%;
   padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-color); }
+  border-radius: 10px;
+  background-color: #181818; }
 
 .project-card__link {
   display: block;
@@ -365,12 +468,12 @@ template {
 .project-card__thumbnail {
   display: block;
   width: 100%;
-  border-radius: calc(var(--border-radius) / 2); }
+  border-radius: calc(10px / 2); }
 
 .project-card__name {
   display: block;
   font-size: 1.5em;
-  font-family: var(--titles-font); }
+  font-family: "Lato", sans-serif; }
 
 .project-card__desc {
   display: block; }
@@ -380,34 +483,39 @@ template {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(min-content, max-content));
-  gap: var(--row-gap);
+  gap: 20px 0;
   justify-items: center;
   align-items: center;
   padding: var(--content-centering); }
+  @media (min-width: 768px) {
+    .testimonials {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, minmax(min-content, max-content));
+      gap: 20px; } }
 
 .testimonial-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(min-content, max-content));
-  gap: var(--row-gap);
+  gap: 20px 0;
   align-items: center;
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--secondary-color); }
+  background-color: #181818; }
 
 .testimonial-card__client-photo {
   display: block;
   width: 100%;
-  border-radius: calc(var(--border-radius) / 2); }
+  border-radius: calc(10px / 2); }
 
 .testimonial-card__client-name {
-  font-family: var(--titles-font);
+  font-family: "Lato", sans-serif;
   font-size: 1.5em;
   text-align: center; }
 
 .testimonial-card__client-desc {
-  font-family: var(--titles-font);
+  font-family: "Lato", sans-serif;
   font-size: .90em;
   text-align: center;
   font-style: italic; }
@@ -420,11 +528,16 @@ template {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
-  gap: var(--row-gap);
+  gap: 20px 0;
   justify-items: center;
   align-items: center;
   padding: var(--content-centering);
   padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .contact {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, minmax(min-content, max-content));
+      gap: 20px; } }
 
 .contact-box {
   display: grid;
@@ -432,7 +545,7 @@ template {
   grid-auto-rows: minmax(min-content, max-content);
   justify-items: left;
   align-items: center;
-  gap: var(--row-gap);
+  gap: 20px 0;
   width: 100%; }
 
 .contact-box__link {
@@ -441,8 +554,8 @@ template {
   justify-content: left;
   align-items: center;
   padding: 20px;
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius);
+  background-color: #181818;
+  border-radius: 10px;
   text-decoration: none;
   color: white;
   width: 100%; }
@@ -457,93 +570,9 @@ template {
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color);
-  z-index: var(--z-normal);
+  background-color: #181818;
   padding: 0 5%; }
 
 .footer__logo {
   display: block;
   width: 25px; }
-
-@media screen and (orientation: landscape) {
-  :root {
-    --content-centering: 0 20%
-    ; } }
-
-@media screen and (min-width: 768px) {
-  :root {
-    --content-centering: 0 5%; }
-  .header__menu-button {
-    display: none; }
-  .menu {
-    visibility: visible;
-    display: block;
-    position: static;
-    height: min-content;
-    width: max-content;
-    background-color: transparent;
-    backdrop-filter: none; }
-  .menu__title {
-    display: none; }
-  .menu__links-list {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    font-size: 1em; }
-  .menu__element {
-    margin-right: 20px; }
-  .menu__element:last-of-type {
-    margin-right: 0; }
-  .menu__link {
-    text-decoration: none;
-    color: var(--font-color);
-    font-family: var(--titles-font); }
-  .menu__link:hover {
-    color: var(--accent-color); }
-  .menu__close-button {
-    display: none; }
-  .aboutme {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, minmax(min-content, max-content));
-    gap: var(--general-gap); }
-  .aboutme .headline1 {
-    grid-column: span 2; }
-  .portfolio {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(min-content, max-content);
-    gap: var(--general-gap); }
-  .portfolio .headline1 {
-    grid-column: span 2; }
-  .testimonials {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, minmax(min-content, max-content));
-    gap: var(--general-gap); }
-  .testimonials .headline1 {
-    grid-column: span 3; }
-  .contact {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, minmax(min-content, max-content));
-    gap: var(--general-gap); }
-  .contact .headline1 {
-    grid-column: span 2; } }
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --content-centering: 0 10%; }
-  .portfolio {
-    grid-template-columns: repeat(3, 1fr); }
-  .portfolio .headline1 {
-    grid-column: span 3; } }
-
-@media screen and (min-width: 1366px) {
-  :root {
-    --content-centering: 0 15%; } }
-
-@media screen and (min-width: 1440px) {
-  :root {
-    --content-centering: 0 20%; } }
-
-@media screen and (min-width: 2560px) {
-  :root {
-    --content-centering: 0 30%; } }

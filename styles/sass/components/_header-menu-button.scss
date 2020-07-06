@@ -2,4 +2,8 @@
     display: block;
     width: 25px;
     cursor: pointer;
+    
+    @media #{$mobile-tablet} {
+        display: none;
+    }
 }
