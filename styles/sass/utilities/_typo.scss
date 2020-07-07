@@ -10,9 +10,11 @@ $line-height: 1.5;
     font: {
         family: $titles-font;
         weight: $titles-font-weight;
-        variant: small-caps;
+        size: 1.7rem;
     }
-    grid-column: 1 / -1;   
+    grid-column: 1 / -1;
+    text-transform: uppercase;
+       
 }
 
 .important-text {

@@ -161,8 +161,9 @@ template {
 .headline1, .headline2, .headline3, .headline4 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-variant: small-caps;
-  grid-column: 1 / -1; }
+  font-size: 1.7rem;
+  grid-column: 1 / -1;
+  text-transform: uppercase; }
 
 .important-text {
   color: orange; }
@@ -350,8 +351,8 @@ template {
     display: block;
     font-family: "Lato", sans-serif;
     font-weight: 700;
-    font-size: 2.2rem;
-    font-variant: small-caps;
+    font-size: 2rem;
+    text-transform: uppercase;
     text-align: center; }
   .welcome__slogan::after {
     content: "";
