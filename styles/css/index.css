@@ -148,7 +148,15 @@ template {
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0; }
 
 .headline1, .headline2, .headline3, .headline4 {
   font-family: "Lato", sans-serif;
@@ -321,7 +329,6 @@ template {
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(min-content, max-content);
   grid-auto-flow: row;
-  gap: 20px 0;
   background: #0c0c0c; }
 
 .welcome {
