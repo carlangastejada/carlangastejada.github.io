@@ -1,0 +1,37 @@
+.not-found {
+    @include flex(column, nowrap, center, center);
+    @include hero_background(rgba(0, 0, 0, .8), $not-found-bg, overlay, center, fixed);
+    height: 80vh;
+    padding: var(--content-centering);
+
+    &__msg {
+        text-align: center;
+        font: {
+            family: $titles-font;
+            variant: small-caps;
+            size: 2rem;
+            weight: $titles-font-weight;
+        }
+        padding: 0 10px;
+    }
+
+    &__explanation {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    &__go-home {
+        @include flex(row, wrap, center, center);
+        text-decoration: none;
+        font-family: $titles-font;
+        color: $font-color;
+        background-color: $secondary-color;
+        padding: 15px;
+        border-radius: 5px;        
+    }
+
+    &__go-home:hover {
+        color: $accent-color;
+    }
+}
