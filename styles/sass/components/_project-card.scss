@@ -4,7 +4,7 @@
     width: 100%;
     padding: 20px;
     border-radius: $border-radius;
-    background-color: $secondary-color;
+    background-color: $main-color;
 
     &__link {
         display: block;
@@ -20,7 +20,6 @@
     &__name {
         display: block;
         font-size: 1.5em;
-        font-family: $titles-font;
     }
     
     &__desc {

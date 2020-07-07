@@ -10,6 +10,7 @@ $line-height: 1.5;
     font: {
         family: $titles-font;
         weight: $titles-font-weight;
+        variant: small-caps;
     }
     grid-column: 1 / -1;   
 }

@@ -1,7 +1,3 @@
-const logo = document.getElementById('header__logo')
-logo.addEventListener('click', () => scrollTo(0, 0))
-
-
 const menu_open_btn = document.getElementById('header__menu-button')
 const menu_close_btn = document.getElementById('menu__close-button')
 const menu = document.getElementById('menu')

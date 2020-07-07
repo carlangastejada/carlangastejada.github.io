@@ -1,0 +1,22 @@
+@import "base/normalize";
+@import "utilities/mediaqueries";
+@import "utilities/colorpallette";
+@import "utilities/typo";
+@import "utilities/gridgaps";
+@import "utilities/zindex";
+@import "utilities/generalsettings";
+@import "utilities/mixins";
+
+@import "components/splash-screen";
+
+@import "layout/body";
+@import "components/header";
+@import "components/menu";
+
+
+@import "layout/main";
+@import "components/portfolio";
+@import "components/project-card";
+
+
+@import "components/footer";
