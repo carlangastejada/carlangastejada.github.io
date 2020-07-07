@@ -1,16 +1,10 @@
 .body {
-    display: grid;
-    grid-template: {
-        columns: 1fr;
-        rows: 10vh 2fr 10vh;
-        areas: "header" "main" "footer"
-    }
-
+    @include fixed_grid(1fr, 10vh 2fr 10vh, "header" "main" "footer", 0, none, none);
+    
     font: {
         family: $body-font;
         weight: $body-font-weight;
     }
-    
-    line-height: $line-height;
     color: $font-color;
+    line-height: $line-height;
 }

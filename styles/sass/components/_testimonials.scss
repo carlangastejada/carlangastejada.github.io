@@ -1,0 +1,9 @@
+.testimonials {
+    display: grid;
+    @include fixed_grid(1fr, repeat(4, minmax(min-content, max-content)), none, $row-gap);
+    padding: var(--content-centering);
+
+    @media #{$mobile-tablet} {
+        @include fixed_grid(repeat(3, 1fr), repeat(2, minmax(min-content, max-content)), none, $general-gap);
+    }
+}

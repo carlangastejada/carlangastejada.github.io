@@ -1,42 +1,37 @@
 .splash-screen {
-    background-color: rgb(12, 12, 12);
+    position: fixed;
+    @include flex(column, nowrap, center, center);
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
     z-index: $z-modal;
-    transition: opacity .1s linear 1s;
+    background-color: rgb(12, 12, 12);
     opacity: 1;
-}
-
-.splash-screen__logo {
-    position: relative;
-    display: block;
-    width: 70px;
-    border-radius: 100%;
-}
-
-.splash-screen__loader {
-    position: absolute;
-    border: 5px solid rgba(255, 255, 255, 0);
-    /* Light grey */
-    border-top: 5px solid $accent-color;
-    border-bottom: 5px solid $accent-color;
-    /* Blue */
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    animation: spin .8s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+    transition: opacity .1s linear 1s;
+    
+    &__logo {
+        position: relative;
+        display: block;
+        width: 70px;
+        border-radius: 100%;
     }
-    100% {
-        transform: rotate(360deg);
+    
+    &__loader {
+        position: absolute;
+        border: 5px solid rgba(255, 255, 255, 0);
+        border-top: 5px solid $accent-color;
+        border-bottom: 5px solid $accent-color;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        animation: spin .8s linear infinite;
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     }
 }

@@ -1,9 +1,8 @@
 .main {
     grid-area: main;
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, minmax(min-content, max-content));
-    grid-template-areas: "welcome" "about-me" "portfolio" "testimonials" "contact";
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-auto-flow: row;
     gap: $row-gap;
     background: $main-color;
 }

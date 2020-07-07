@@ -11,10 +11,7 @@ $line-height: 1.5;
         family: $titles-font;
         weight: $titles-font-weight;
     }
-
-    @media #{$mobile-tablet} {
-        grid-column: 1 / -1;
-    }
+    grid-column: 1 / -1;   
 }
 
 .important-text {

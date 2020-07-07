@@ -1,0 +1,15 @@
+.footer {
+    grid-area: footer;
+    @include flex(row, nowrap, center, space-between);
+    background-color: $secondary-color;
+    padding: var(--content-centering);
+
+    &__copyright {
+        color: inherit;
+    }
+
+    &__logo {
+        display: block;
+        width: 25px;
+    }
+}

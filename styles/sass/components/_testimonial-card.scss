@@ -1,34 +1,31 @@
 .testimonial-card {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(min-content, max-content));
-    gap: $row-gap;
-    align-items: center;
+    @include fixed_grid(1fr, repeat(4, minmax(min-content, max-content)), none, $row-gap);
     width: 100%;
     padding: 20px;
     border-radius: 10px;
-    background-color: $secondary-color
-}
+    background-color: $secondary-color;
 
-.testimonial-card__client-photo {
-    display: block;
-    width: 100%;
-    border-radius: calc(#{$border-radius} / 2);
-}
-
-.testimonial-card__client-name {
-    font-family: $titles-font;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.testimonial-card__client-desc {
-    font-family: $titles-font;
-    font-size: .90em;
-    text-align: center;
-    font-style: italic;
-}
-
-.testimonial-card__client-review {
-    font-style: italic;
+    &__client-photo {
+        display: block;
+        width: 100%;
+        border-radius: calc(#{$border-radius} / 2);
+    }
+    
+    &__client-name {
+        font-family: $titles-font;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    &__client-desc {
+        font-family: $titles-font;
+        font-size: .90em;
+        text-align: center;
+        font-style: italic;
+    }
+    
+    &__client-review {
+        font-style: italic;
+    }
 }

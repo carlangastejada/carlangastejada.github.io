@@ -1,31 +1,29 @@
 .project-card {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, minmax(min-content, max-content));
-    gap: $row-gap;
+    @include fixed_grid(1fr, repeat(3, minmax(min-content, max-content)), none, $row-gap);
     width: 100%;
     padding: 20px;
     border-radius: $border-radius;
-    background-color: $secondary-color
-}
+    background-color: $secondary-color;
 
-.project-card__link {
-    display: block;
-    width: 100%;
-}
-
-.project-card__thumbnail {
-    display: block;
-    width: 100%;
-    border-radius: calc(#{$border-radius} / 2);
-}
-
-.project-card__name {
-    display: block;
-    font-size: 1.5em;
-    font-family: $titles-font;
-}
-
-.project-card__desc {
-    display: block;
+    &__link {
+        display: block;
+        width: 100%;
+    }
+    
+    &__thumbnail {
+        display: block;
+        width: 100%;
+        border-radius: calc(#{$border-radius} / 2);
+    }
+    
+    &__name {
+        display: block;
+        font-size: 1.5em;
+        font-family: $titles-font;
+    }
+    
+    &__desc {
+        display: block;
+    }
 }

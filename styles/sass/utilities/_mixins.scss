@@ -1,8 +1,9 @@
-@mixin grid($template-columns, $template-rows, $gap, $align: center, $justify: center) {
+@mixin fixed_grid($template-columns, $template-rows, $template-areas, $gap, $align: center, $justify: center) {
     display: grid;
     grid: {
         template-columns: $template-columns;
         template-rows: $template-rows;
+        template-areas: $template-areas;
     }
     gap: $gap;
     align-items: $align;
@@ -17,4 +18,23 @@
     }
     align-items: $align;
     justify-content: $justify;
+}
+
+@mixin responsive_size($min-width, $max-width, $min-height: initial, $max-height: initial) {
+    min-width: $min-width;
+    max-width: $max-width;
+    min-height: $min-height;
+    max-height: $max-height;
+}
+
+@mixin hero_background($color, $image, $blend-mode, $position, $attachment) {
+    background: {
+        color: $color;
+        image: $image;
+        blend-mode: $blend-mode;
+        position: $position;
+        attachment: $attachment;
+        size: cover;
+        repeat: no-repeat;
+    }
 }
