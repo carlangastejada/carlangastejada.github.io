@@ -8,14 +8,14 @@
         text-align: center;
         font: {
             family: $titles-font;
-            variant: small-caps;
             size: 2rem;
-            weight: $titles-font-weight;
         }
+        text-transform: uppercase;
         padding: 0 10px;
     }
 
     &__explanation {
+        font-style: $titles-font;
         text-align: center;
         margin-bottom: 20px;
         padding: 0 10px;
@@ -25,13 +25,16 @@
         @include flex(row, wrap, center, center);
         text-decoration: none;
         font-family: $titles-font;
-        color: $font-color;
-        background-color: $secondary-color;
+        font-size: 1.5em;
+        color: black;
+        background-color: white;
         padding: 15px;
-        border-radius: 5px;        
+        border-radius: 5px;
+        transition: background-color .2s, color .2s;        
     }
 
     &__go-home:hover {
-        color: $accent-color;
+        color: $font-color;
+        background-color: $main-color;
     }
 }

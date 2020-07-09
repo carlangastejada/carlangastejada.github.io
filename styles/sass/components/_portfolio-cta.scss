@@ -1,0 +1,4 @@
+.portfolio-cta {
+    @include fixed_grid(1fr, repeat(2, minmax(min-content, max-content)), none, $row-gap);
+    padding: var(--content-centering);
+}

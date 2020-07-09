@@ -163,7 +163,8 @@ template {
   font-weight: 700;
   font-size: 1.7rem;
   grid-column: 1 / -1;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
 
 .important-text {
   color: orange; }
@@ -350,11 +351,11 @@ template {
   .not-found__msg {
     text-align: center;
     font-family: "Lato", sans-serif;
-    font-variant: small-caps;
     font-size: 2rem;
-    font-weight: 700;
+    text-transform: uppercase;
     padding: 0 10px; }
   .not-found__explanation {
+    font-style: "Lato", sans-serif;
     text-align: center;
     margin-bottom: 20px;
     padding: 0 10px; }
@@ -366,12 +367,15 @@ template {
     justify-content: center;
     text-decoration: none;
     font-family: "Lato", sans-serif;
-    color: white;
-    background-color: #181818;
+    font-size: 1.5em;
+    color: black;
+    background-color: white;
     padding: 15px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    transition: background-color .2s, color .2s; }
   .not-found__go-home:hover {
-    color: orange; }
+    color: white;
+    background-color: #0c0c0c; }
 
 .footer {
   grid-area: footer;

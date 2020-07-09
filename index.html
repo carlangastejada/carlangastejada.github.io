@@ -31,6 +31,7 @@
     </title>
     <script src="./scripts/splash-screen.js"></script>
     <script src="./scripts/index.js" async></script>
+    <script src="./scripts/testimonial-card.js" defer></script>
 </head>
 <body class="body" id="body">
     <header class="header" itemscope itemtype="https://schema.org/Brand" id="header">
@@ -134,45 +135,75 @@
                 </div>
             </div>
         </section>
+        <section class="portfolio-cta">
+            <h1 class="headline1">
+                Portafolio
+            </h1>
+            <div class="cta">
+                <img src="./img/bg/welcome-bg.jpg" alt="" class="cta__bg-blur">
+                <a href="./portfolio" class="cta__button">IR AL PORTAFOLIO</a>
+            </div>
+        </section>
         <section class="testimonials" id="testimonials">
             <h1 class="headline1">
-                Opiniones
+                Opiniones 
+                <span class="testimonials__explanation">
+                    Haz clic en las fotos para ver los comentarios.
+                </span>
             </h1>
             <div class="testimonial-card">
                 <img src="./img/client-photos/client-1.jpg" alt="" class="testimonial-card__client-photo">
-                <span class="testimonial-card__client-name">
-                    Melinda Schumann
-                </span>
-                <span class="testimonial-card__client-desc">
-                    CEO de CBsoftware Company
-                </span>
-                <span class="testimonial-card__client-review">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                <div class="testimonial-card__client-info">    
+                    <span class="testimonial-card__client-name">
+                        Melinda Schumann
+                    </span>
+                    <span class="testimonial-card__client-desc">
+                        CEO de CBsoftware Company
+                    </span>
+                    <span class="testimonial-card__client-review">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quaerat quisquam pariatur rerum iusto ab recusandae debitis, 
+                        illum veritatis, necessitatibus sint sed voluptatibus, 
+                        aperiam consequuntur? Alias a eveniet vitae in placeat? 
+                    </span>
+                    <img src="./img/close.svg" class="testimonial-card__close-info">
+                </div>
             </div>
             <div class="testimonial-card">
                 <img src="./img/client-photos/client-2.jpg" alt="" class="testimonial-card__client-photo">
-                <span class="testimonial-card__client-name">
-                    Charles Wilson
-                </span>
-                <span class="testimonial-card__client-desc">
-                    CTO de Some Engineering Company
-                </span>
-                <span class="testimonial-card__client-review">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                <div class="testimonial-card__client-info">    
+                    <span class="testimonial-card__client-name">
+                        Charles Wilson
+                    </span>
+                    <span class="testimonial-card__client-desc">
+                        Ingeniero en Sistemas
+                    </span>
+                    <span class="testimonial-card__client-review">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quaerat quisquam pariatur rerum iusto ab recusandae debitis, 
+                        illum veritatis, necessitatibus sint sed voluptatibus, 
+                        aperiam consequuntur? Alias a eveniet vitae in placeat? 
+                    </span>
+                    <img src="./img/close.svg" class="testimonial-card__close-info">
+                </div>
             </div>
             <div class="testimonial-card">
                 <img src="./img/client-photos/client-3.jpg" alt="" class="testimonial-card__client-photo">
-                <span class="testimonial-card__client-name">
-                    Jeanine Russo
-                </span>
-                <span class="testimonial-card__client-desc">
-                    Ingeniera en Sistemas
-                </span>
-                <span class="testimonial-card__client-review">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                <div class="testimonial-card__client-info">    
+                    <span class="testimonial-card__client-name">
+                        Jennifer Russo
+                    </span>
+                    <span class="testimonial-card__client-desc">
+                        CEO de Some Engineering Company
+                    </span>
+                    <span class="testimonial-card__client-review">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quaerat quisquam pariatur rerum iusto ab recusandae debitis, 
+                        illum veritatis, necessitatibus sint sed voluptatibus, 
+                        aperiam consequuntur? Alias a eveniet vitae in placeat? 
+                    </span>
+                    <img src="./img/close.svg" class="testimonial-card__close-info">
+                </div>
             </div>
         </section>
         <section class="contact" id="contact" itemscope itemtype="https://schema.org/ContactPoint">

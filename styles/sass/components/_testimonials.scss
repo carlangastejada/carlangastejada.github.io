@@ -6,4 +6,11 @@
     @media #{$mobile-tablet} {
         @include fixed_grid(repeat(3, 1fr), repeat(2, minmax(min-content, max-content)), none, $general-gap);
     }
+    
+    &__explanation {
+        display: block;
+        font-size: .5em;
+        text-align: center;
+        z-index: $z-tooltip;
+    }
 }
