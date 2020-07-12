@@ -1,5 +1,5 @@
 .body {
-    @include fixed_grid(1fr, 10vh 1fr 10vh, "header" "main" "footer", 0, none, none);
+    @include fixed_grid(1fr, 10vh 1fr 10vh, "header" "main" "footer", 0, initial, initial);
     
     font: {
         family: $body-font;
