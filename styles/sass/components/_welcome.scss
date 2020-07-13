@@ -1,7 +1,7 @@
 .welcome {
     position: relative;
     @include flex(column, nowrap, center, center);
-    height: 90vh;
+    height: calc(100vh - 60px);
     @include hero_background(rgba(0, 0, 0, .8), $welcome-bg, overlay, center, fixed);
 
     &__slogan {
