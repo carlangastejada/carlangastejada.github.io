@@ -1,15 +1,3 @@
-const head = document.getElementById("head");
-
-head.insertAdjacentHTML(
-  "afterend",
-  `
-<div class="splash-screen" id="splash-screen">
-    <img src="./img/favicon.svg" class="splash-screen__logo">
-    <div class="splash-screen__loader"></div>
-</div>
-`
-);
-
 const splash_screen = document.getElementById("splash-screen");
 
 window.addEventListener("load", () => {
