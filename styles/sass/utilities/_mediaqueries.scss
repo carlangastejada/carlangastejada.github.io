@@ -1,6 +1,24 @@
-$mobile-landscape: screen and (orientation: landscape);
-$mobile-tablet: screen and (min-width: 768px);
-$laptop-small: screen and (min-width: 1024px);
-$laptop-normal: screen and (min-width: 1366px);
-$laptop-big: screen and (min-width: 1440px);
-$biggest-resolution: screen and (min-width: 2560px);
+$mobile-landscape: screen and
+  (
+    orientation: landscape,
+  );
+$mobile-tablet: screen and
+  (
+    min-width: 768px,
+  );
+$laptop-small: screen and
+  (
+    min-width: 1024px,
+  );
+$laptop-normal: screen and
+  (
+    min-width: 1366px,
+  );
+$laptop-big: screen and
+  (
+    min-width: 1440px,
+  );
+$biggest-resolution: screen and
+  (
+    min-width: 2560px,
+  );

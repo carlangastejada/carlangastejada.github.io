@@ -1,55 +1,60 @@
 .testimonial-card {
-    position: relative;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: $secondary-color;
+  overflow: hidden;
+
+  &__client-photo {
+    display: block;
     width: 100%;
-    border-radius: 10px;
-    background-color: $secondary-color;
-    overflow: hidden;
-    
-    &__client-photo {
-        display: block;
-        width: 100%;
-        cursor: pointer;
-    }
+    cursor: pointer;
+  }
 
-    &__client-info {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: $z-tooltip;
-        @include fixed_grid(1fr, repeat(3, minmax(min-content, max-content)), none, $row-gap);
-        padding: 30px 20px;
-        background-color: transparentize($color: #000, $amount: .1);
-        width: 100%;
-        height: 100%;
-        transition: transform .2s;
-        transform: translateY(100%);
-        overflow-y: scroll;
-    }
-    
-    &__client-name {
-        font-family: $titles-font;
-        font-size: 1.8em;
-        text-align: center;
-    }
-    
-    &__client-desc {
-        font-family: $titles-font;
-        font-size: .90em;
-        text-align: center;
-        font-style: italic;
-    }
-    
-    &__client-review {
-        font-style: italic;
-        padding-bottom: 20px;
-    }
+  &__client-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-tooltip;
+    @include fixed_grid(
+      1fr,
+      repeat(3, minmax(min-content, max-content)),
+      none,
+      $row-gap
+    );
+    padding: 30px 20px;
+    background-color: transparentize($color: #000, $amount: 0.1);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s;
+    transform: translateY(100%);
+    overflow-y: scroll;
+  }
 
-    &__close-info {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        display: block;
-        width: 17px;
-        cursor: pointer;
-    }
+  &__client-name {
+    font-family: $titles-font;
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  &__client-desc {
+    font-family: $titles-font;
+    font-size: 0.9em;
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__client-review {
+    font-style: italic;
+    padding-bottom: 20px;
+  }
+
+  &__close-info {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: block;
+    width: 17px;
+    cursor: pointer;
+  }
 }

@@ -1,21 +1,27 @@
 .portfolio {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(min-content, max-content);
-    gap: $row-gap;
-    justify-items: center;
-    align-items: center;
-    padding: var(--content-centering);
-    padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(min-content, max-content);
+  gap: $row-gap;
+  justify-items: center;
+  align-items: center;
+  padding: var(--content-centering);
+  padding-bottom: 20px;
 
-    @include hero_background(rgba(0, 0, 0, .8), $welcome-bg, overlay, center, fixed);
+  @include hero_background(
+    rgba(0, 0, 0, 0.8),
+    $welcome-bg,
+    overlay,
+    center,
+    fixed
+  );
 
-    @media #{$mobile-tablet} {
-        grid-template-columns: repeat(2, 1fr);
-        gap: $general-gap;
-    }
+  @media #{$mobile-tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $general-gap;
+  }
 
-    @media #{$laptop-small} {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  @media #{$laptop-small} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

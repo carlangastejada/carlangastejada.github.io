@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-$titles-font: 'Lato', sans-serif;
-$body-font: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+$titles-font: "Lato", sans-serif;
+$body-font: "Roboto", sans-serif;
 $font-color: white;
 $titles-font-weight: 700;
 $body-font-weight: 400;
 $line-height: 1.5;
 
-.headline1, .headline2, .headline3, .headline4 {
-    font: {
-        family: $titles-font;
-        weight: $titles-font-weight;
-        size: 1.7rem;
-    }
-    grid-column: 1 / -1;
-    text-transform: uppercase;
-    text-align: center;
-       
+.headline1,
+.headline2,
+.headline3,
+.headline4 {
+  font: {
+    family: $titles-font;
+    weight: $titles-font-weight;
+    size: 1.7rem;
+  }
+  grid-column: 1 / -1;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .important-text {
-    color: $accent-color;
+  color: $accent-color;
 }
 
 .section-explanation {
-    display: block;
-    font-size: .5em;
-    text-align: center;
+  display: block;
+  font-size: 0.5em;
+  text-align: center;
 }

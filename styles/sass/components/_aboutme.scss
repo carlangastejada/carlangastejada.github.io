@@ -1,12 +1,22 @@
 .aboutme {
-    @include fixed_grid(1fr, repeat(3, minmax(min-content, max-content)), none, $row-gap);
-    padding: var(--content-centering);
+  @include fixed_grid(
+    1fr,
+    repeat(3, minmax(min-content, max-content)),
+    none,
+    $row-gap
+  );
+  padding: var(--content-centering);
 
-    @media #{$mobile-tablet} {
-        @include fixed_grid(repeat(2, 1fr), repeat(2, minmax(min-content, max-content)), none, $general-gap)
-    }
+  @media #{$mobile-tablet} {
+    @include fixed_grid(
+      repeat(2, 1fr),
+      repeat(2, minmax(min-content, max-content)),
+      none,
+      $general-gap
+    );
+  }
 
-    &__desc {
-        color: inherit;
-    }
+  &__desc {
+    color: inherit;
+  }
 }

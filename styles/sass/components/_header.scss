@@ -1,25 +1,25 @@
 .header {
-    grid-area: header;
-    position: sticky;
-    top: 0;
-    z-index: $z-fixed;
-    @include flex(row, nowrap, center, space-between);
-    height: 100%;
-    background-color: $secondary-color;
-    padding: var(--content-centering);
-    
-    &__logo {
-        display: block;
-        width: 150px;
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: $z-fixed;
+  @include flex(row, nowrap, center, space-between);
+  height: 100%;
+  background-color: $secondary-color;
+  padding: var(--content-centering);
+
+  &__logo {
+    display: block;
+    width: 150px;
+  }
+
+  &__menu-button {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+
+    @media #{$mobile-tablet} {
+      display: none;
     }
-    
-    &__menu-button {
-        display: block;
-        width: 25px;
-        cursor: pointer;
-        
-        @media #{$mobile-tablet} {
-            display: none;
-        }
-    }
+  }
 }
