@@ -169,6 +169,11 @@ template {
 .important-text {
   color: orange; }
 
+.section-explanation {
+  display: block;
+  font-size: .5em;
+  text-align: center; }
+
 :root {
   scroll-behavior: smooth;
   --content-centering: 0 10%; }
@@ -498,11 +503,6 @@ template {
       gap: 20px;
       align-items: center;
       justify-items: center; } }
-  .testimonials__explanation {
-    display: block;
-    font-size: .5em;
-    text-align: center;
-    z-index: 10; }
 
 .testimonial-card {
   position: relative;
