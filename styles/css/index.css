@@ -168,7 +168,8 @@ template {
   font-size: 1.7rem;
   grid-column: 1 / -1;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  padding-top: 20px; }
 
 .important-text {
   color: orange; }
@@ -477,7 +478,7 @@ template {
   grid-template-rows: repeat(2, minmax(-webkit-min-content, -webkit-max-content));
   grid-template-rows: repeat(2, minmax(min-content, max-content));
   grid-template-areas: none;
-  gap: 20px 0;
+  gap: 0;
   align-items: center;
   justify-items: center;
   padding: var(--content-centering); }

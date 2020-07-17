@@ -168,7 +168,8 @@ template {
   font-size: 1.7rem;
   grid-column: 1 / -1;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  padding-top: 20px; }
 
 .important-text {
   color: orange; }

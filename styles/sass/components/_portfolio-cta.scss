@@ -3,7 +3,7 @@
     1fr,
     repeat(2, minmax(min-content, max-content)),
     none,
-    $row-gap
+    0
   );
   padding: var(--content-centering);
 }
