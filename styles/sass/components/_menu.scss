@@ -21,6 +21,7 @@
 
   &__title {
     font-size: 1.2em;
+    margin-bottom: 20px;
 
     @media #{$mobile-tablet} {
       display: none;
@@ -44,12 +45,32 @@
   }
 
   &__element {
+    display: table;
+    margin-bottom: 20px;
+    
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: white;
+      transition: transform .2s;
+      transform-origin: center;
+      transform: scaleX(0)
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
     @media #{$mobile-tablet} {
       margin-right: 20px;
+      margin-bottom: 0;
     }
   }
 
   &__element:last-of-type {
+    margin-bottom: 0;
+
     @media #{$mobile-tablet} {
       margin-right: 0;
     }

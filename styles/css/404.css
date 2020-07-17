@@ -299,7 +299,8 @@ template {
       width: max-content;
       background-color: transparent; } }
   .menu__title {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin-bottom: 20px; }
     @media (min-width: 768px) {
       .menu__title {
         display: none; } }
@@ -316,12 +317,28 @@ template {
         flex-flow: row nowrap;
         align-items: center;
         font-size: 1em; } }
-  @media (min-width: 768px) {
-    .menu__element {
-      margin-right: 20px; } }
-  @media (min-width: 768px) {
-    .menu__element:last-of-type {
-      margin-right: 0; } }
+  .menu__element {
+    display: table;
+    margin-bottom: 20px; }
+    .menu__element::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: white;
+      transition: transform .2s;
+      transform-origin: center;
+      transform: scaleX(0); }
+    .menu__element:hover::after {
+      transform: scaleX(1); }
+    @media (min-width: 768px) {
+      .menu__element {
+        margin-right: 20px;
+        margin-bottom: 0; } }
+  .menu__element:last-of-type {
+    margin-bottom: 0; }
+    @media (min-width: 768px) {
+      .menu__element:last-of-type {
+        margin-right: 0; } }
   .menu__link {
     text-decoration: none;
     color: white;
