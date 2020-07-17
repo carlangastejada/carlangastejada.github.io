@@ -8,11 +8,14 @@
     <title>
       404 | Carlos Reyes
     </title>
-    <script src="./scripts/splash-screen.js" defer></script>
-    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/index.js" type="module"></script>
   </head>
 
   <body class="body" id="body">
+    <div class="splash-screen" id="splash-screen">
+      <img src="./img/favicon.svg" class="splash-screen__logo">
+      <div class="splash-screen__loader"></div>
+    </div>
     <header
       class="header"
       itemscope

@@ -1,11 +1,9 @@
-import * as splashScreen from "./modules/splash-screen.js";
+import * as SplashScreen from "./modules/splash-screen.js";
 import NavMenu from "./modules/menu.js";
-
-splashScreen.injectHTML();
-const navbarMmenu = new NavMenu("menu");
-
-window.addEventListener("load", splashScreen.quit);
-window.addEventListener("load", navbarMmenu.enable);
-window.addEventListener("resize", navbarMmenu.enable);
-
 import "./modules/testimonial-card.js";
+
+const navbarMenu = new NavMenu("menu");
+
+window.addEventListener("load", SplashScreen.quit);
+window.addEventListener("load", navbarMenu.enable);
+window.addEventListener("resize", navbarMenu.enable);
