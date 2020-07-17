@@ -1,6 +1,7 @@
 import * as SplashScreen from "./modules/splash-screen.js";
 import NavMenu from "./modules/menu.js";
 import "./modules/testimonial-card.js";
+import "./modules/welcome-slogan.js"
 
 const navbarMenu = new NavMenu("menu");
 

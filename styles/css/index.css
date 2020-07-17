@@ -389,7 +389,8 @@ template {
     font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 0 20px; }
+    padding: 0 20px;
+    transition: opacity .5s; }
   .welcome__slogan::after {
     content: "";
     display: inline-block;
