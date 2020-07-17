@@ -7,14 +7,7 @@
   align-items: center;
   padding: var(--content-centering);
   padding-bottom: 20px;
-
-  @include hero_background(
-    rgba(0, 0, 0, 0.8),
-    $welcome-bg,
-    overlay,
-    center,
-    fixed
-  );
+  background-color: $main-color;
 
   @media #{$mobile-tablet} {
     grid-template-columns: repeat(2, 1fr);

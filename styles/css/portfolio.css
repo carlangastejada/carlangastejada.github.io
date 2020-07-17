@@ -377,13 +377,7 @@ template {
   align-items: center;
   padding: var(--content-centering);
   padding-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  background-image: url(../../img/bg/welcome-bg.jpg);
-  background-blend-mode: overlay;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-color: #0c0c0c; }
   @media (min-width: 768px) {
     .portfolio {
       grid-template-columns: repeat(2, 1fr);
@@ -405,7 +399,7 @@ template {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  background-color: #0c0c0c; }
+  background-color: #181818; }
   .project-card__link {
     display: block;
     width: 100%; }
