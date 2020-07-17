@@ -319,7 +319,7 @@ template {
         font-size: 1em; } }
   .menu__element {
     display: table;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
     .menu__element::after {
       content: "";
       display: block;
