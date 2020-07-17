@@ -1,42 +1,39 @@
 .cta {
-  position: relative;
-
-  &__bg-blur {
-    width: 100%;
-    filter: blur(3px) brightness(70%);
-    border-radius: $border-radius;
-  }
+  @include flex(row, nowrap, center, center);
 
   &__button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    display: block;
+    display: table;
     text-decoration: none;
-    color: $font-color;
-    background-color: white;
-    width: 90%;
-    height: min-content;
-    padding: 10px 50px;
-    transition: background-color 0.2s, color 0.2s;
+    width: 100%;
+    padding: 10px;
     font: {
       family: $titles-font;
-      size: initial;
+      size: 1.4em;
     }
     text-align: center;
-    border-radius: $border-radius;
-    color: black;
+    color: $font-color;
+    border-bottom: 2px solid white;
+    animation: flash .5s ease-in-out infinite alternate;
 
-    &:hover {
-      background-color: $main-color;
-      color: $font-color;
+    &::after {
+      content: ">";
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    @keyframes flash {
+      from {
+        color: $font-color;
+        border-bottom: 2px solid white;
+      }
+
+      to {
+        color: $accent-color;
+        border-bottom: 2px solid $accent-color;
+      }
     }
 
     @media #{$mobile-tablet} {
-      width: 60%;
       font-size: 2em;
     }
   }
