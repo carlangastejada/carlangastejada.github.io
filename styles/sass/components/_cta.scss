@@ -3,17 +3,15 @@
 
   &__button {
     display: table;
-    text-decoration: none;
     width: 100%;
     padding: 10px;
     font: {
       family: $titles-font;
       size: 1.4em;
     }
+    text-decoration: none;
     text-align: center;
-    color: $font-color;
-    border-bottom: 2px solid white;
-    animation: flash .5s ease-in-out infinite alternate;
+    animation: flash 0.5s ease-in-out infinite alternate;
 
     &::after {
       content: ">";
