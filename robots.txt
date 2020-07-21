@@ -1,1 +1,2 @@
-404.html
+User-agent: *
+Disallow: /404.html
