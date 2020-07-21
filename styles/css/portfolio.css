@@ -377,7 +377,8 @@ template {
   align-items: center;
   padding: var(--content-centering);
   padding-bottom: 20px;
-  background-color: #0c0c0c; }
+  background-color: #0c0c0c;
+  height: calc(100vh - 120px); }
   @media (min-width: 768px) {
     .portfolio {
       grid-template-columns: repeat(2, 1fr);
@@ -399,7 +400,10 @@ template {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  background-color: #181818; }
+  background-color: #181818;
+  transition: transform .2s; }
+  .project-card:hover {
+    transform: scale(1.1); }
   .project-card__link {
     display: block;
     width: 100%; }

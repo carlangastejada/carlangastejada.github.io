@@ -8,6 +8,7 @@
   padding: var(--content-centering);
   padding-bottom: 20px;
   background-color: $main-color;
+  height: calc(100vh - 120px);
 
   @media #{$mobile-tablet} {
     grid-template-columns: repeat(2, 1fr);
