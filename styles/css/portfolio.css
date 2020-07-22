@@ -410,13 +410,26 @@ template {
     display: block;
     width: 100%; }
   .project-card__name {
-    display: block;
+    display: table;
     font-size: 1.5em;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
+    color: white;
     padding-left: 20px;
     padding-right: 20px; }
+    .project-card__name::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: white;
+      transition: transform .2s;
+      transform: scaleX(0); }
+    .project-card__name:hover {
+      color: orange; }
+      .project-card__name:hover::after {
+        transform: scaleX(1); }
   .project-card__desc {
     display: block;
     padding: 0 20px 20px 20px; }

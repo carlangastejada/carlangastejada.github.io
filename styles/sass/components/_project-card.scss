@@ -26,15 +26,33 @@
   }
 
   &__name {
-    display: block;
+    display: table;
     font: {
       size: 1.5em;
       family: $body-font;
       weight: 700;
     }
     text-transform: uppercase;
+    text-decoration: none;
+    color: $font-color;
     padding-left: 20px;
     padding-right: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: white;
+      transition: transform .2s;
+      transform: scaleX(0)
+    }
+
+    &:hover {
+      color: $accent-color;
+      &::after {
+        transform: scaleX(1.0)
+      }
+    }
   }
 
   &__desc {
