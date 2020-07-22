@@ -7,13 +7,12 @@
     $row-gap
   );
   width: 100%;
-  padding: 20px;
-  border-radius: $border-radius;
   background-color: $secondary-color;
-  transition: transform .2s;
+  filter: saturate(0);
+  transition: filter .2s;
 
   &:hover {
-    transform: scale(1.1);
+    filter: saturate(100%);
   }
 
   &__link {
@@ -24,19 +23,22 @@
   &__thumbnail {
     display: block;
     width: 100%;
-    border-radius: calc(#{$border-radius} / 2);
   }
 
   &__name {
     display: block;
     font: {
       size: 1.5em;
-      family: $titles-font;
+      family: $body-font;
+      weight: 700;
     }
     text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   &__desc {
     display: block;
+    padding: 0 20px 20px 20px;
   }
 }
