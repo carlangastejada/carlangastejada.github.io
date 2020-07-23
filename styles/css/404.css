@@ -365,7 +365,23 @@ template {
   grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
   grid-auto-rows: minmax(min-content, max-content);
   grid-auto-flow: row;
-  background: #0c0c0c; }
+  position: relative; }
+  .main::before {
+    background-color: #0c0c0c;
+    background-image: url(../../img/bg/main-bg.jpg);
+    background-blend-mode: overlay;
+    background-position: top;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    will-change: transform;
+    z-index: -10; }
 
 .not-found {
   display: flex;

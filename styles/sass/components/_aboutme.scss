@@ -16,7 +16,13 @@
     );
   }
 
-  &__desc {
-    color: inherit;
+  &__picture {
+    width: 70%;
+    filter: brightness(75%);
+    border-radius: $border-radius;
+
+    @media #{$mobile-tablet} {
+      justify-self: right;
+    }
   }
 }

@@ -10,11 +10,13 @@
   &__link {
     @include flex(row, nowrap, center, left);
     padding: 20px;
-    background-color: $secondary-color;
-    border-radius: $border-radius;
     text-decoration: none;
+    text-transform: uppercase;
+    font-family: $titles-font;
     color: $font-color;
     width: 100%;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
   }
 
   &__icon {
