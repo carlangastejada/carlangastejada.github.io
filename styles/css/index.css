@@ -461,7 +461,6 @@ template {
       justify-items: center; } }
   .aboutme__picture {
     width: 70%;
-    filter: brightness(75%);
     border-radius: 5px; }
     @media (min-width: 768px) {
       .aboutme__picture {
